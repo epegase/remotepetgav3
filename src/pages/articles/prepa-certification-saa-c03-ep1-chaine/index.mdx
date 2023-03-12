@@ -1,0 +1,101 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import Image from 'next/future/image'
+import designSystem from './gap-competences-cloud.png'
+
+export const meta = {
+  author: 'Duverger PETGA',
+  date: '2023-03-13',
+  title: 'Prépa Certification Architecte de solutions AWS | Ep.1: Présentation de la Chaîne',
+  description:
+    'Cette note est le premier épisode d\'\ une série de vidéos sur la préparation à la certification Architecte de solutions AWS. Je partage mon parcours et mon expérience en tant qu\'\architecte de solutions AWS, ainsi que les frustrations rencontrées en chemin. Ce qui m\'\a amené à nourrir le projet de créer une communauté professionnelle autour de cette profession.',
+}
+
+export default (props) => <ArticleLayout meta={meta} {...props} />
+
+Bonjour et Bienvenue au Club des Architectes Cloud AWS… La chaîne Youtube dont l’ambition est de rassembler les architectes cloud AWS d’expression francophone sous une même bannière. Vous l’avez compris, mon ambition est de créer une communauté professionnelle autour de la profession d’architecte cloud. Mais avant d’y arriver, il faut au préalable mouiller le maillot en construisant du contenu propre à cette profession. 
+
+C’est une expérience que je souhaite porter et durant les mois ou les années qui viennent, je vais la porter pour voir jusqu’où cela peut me mener. Je ne suis pas à la recherche des vues ou des abonnés. Et je ne me soumettrais à aucune évaluation ou critique de qui que ce soit. La seule critique acceptée est la proposition, ce qu’on appelle parfois “critique constructive”. 
+
+Pour un début et comme je suis en phase d’expérimentation, je vais procéder à une publication journalière sauf les week-end… ce qui va donner 5 publications par semaine. Je compte suivre les pas des professionnels comme Ryan Carniato, Noah Gift ou encore Kent C. Dodds qui font hebdomadairement des streaming de 4h ou 5h de temps de très haute qualité. Etant encore début, je vais me contenter de publications journalières. La qualité vient toujours avec la quantité et à chaque phase sa réalité. Mais avant d’y arriver, une présentation de l’auteur ou “créateur”, l’étiquette à la mode aujourd’hui pour les “Youtubeurs”.
+
+## 1- **Qui Suis-je ?**
+
+Je suis Duverger PETGA, architecte de solutions AWS depuis Novembre 2022 et j’ai entrepris de partager mon parcours pour permettre à d’autres personnes intéressées de sauter le pas et changer de carrière. Je suis aussi le fondateur de FaStyle, une application qui permet de sauvegarder et partager les inspirations de styles, beauté et tout ce qui tourne autour de la mode et le bien-être. Elle est en cours de développement et j'espère que d'ici la fin d'année, la première mouture, le MVP, sera disponible dans les plateformes.
+
+A la base, j’étais gestionnaire de stocks dans une entreprise industrielle et j’ai entrepris, depuis Janvier 2020, un processus de changement de carrière qui m’a mené tour à tour à décrocher une certification à React avec Udacity, une sur les bases du machine learning avec AWS et une autre sur GraphQL avec Apollo GraphQL. Aucune de ces certifications ne m’a donné un avantage supplémentaire sur le marché de l’emploi pour les “*remote*” fortement dominé par les offres pour “*senior*” ou encore “*mid-level*”. Il est très difficile d’obtenir à la fois une offre “*entry level*” et “*remote*”.
+
+Peut être ma stratégie n’était pas la bonne. Qu’à cela ne tienne, ma sélection comme [AWS Community Builder](https://aws.amazon.com/developer/community/community-builders/?nc1=h_ls) début 2022 a donné un nouveau souffle à mon projet de changement de carrière, au moment même où les multiples de rejets de candidature entamaient déjà mon optimisme.
+
+Dans le cadre des nombreux avantages offerts par AWS lorsque vous êtes sélectionné “*Community Builder*”, il y a la possibilité de faire une certification gratuitement. Et mon choix s'est porté vers la certification “[AWS Certified Solutions Architect – Associate](https://aws.amazon.com/fr/certification/certified-solutions-architect-associate/)”. Ayant déjà des bases en front-end avec React, je voulais avoir une idée du prolongement en back-end pour une application complète. Et AWS offre du tout, avec près de 200 produits et services.
+
+Mon objectif dans mon parcours d'apprentissage était de démêler ce tout, pour savoir à quoi correspondait tel produit ou service AWS par rapport à tel type de problème. C'est le résultat de ce parcours que j'ai voulu partager avec tous ceux qui sont dans la même situation que moi… même si c'est une ou deux personnes… inspiré en grande partie par des développeurs comme [Ryan Carniato](https://www.youtube.com/c/RyanCarniato9) ou encore [Noah Gift](https://www.youtube.com/@pragmaticai) qui produisent de très longues vidéos très techniques avec une audience bien précise, sans se soucier du nombre.
+
+Je pense être mieux placé, à travers mon parcours et mes résultats, pour comprendre ceux qui hésitent à sauter le pas et qui trouvent que c'est difficile, voire impossible d'y arriver sans diplômes, background ou connaissances en IT. Mon message est simple : “**C’est Possible**”.
+
+## 2- Le Pourquoi de cette chaîne : **Dépasser la critique stérile…**
+
+Si j'ai décidé de créer cette chaîne, c'est pour aider d'autres développeurs qui peuvent ressentir les mêmes frustrations que j'ai rencontré avec AWS. AWS investit énormément dans la formation avec [AWS Educate](https://aws.amazon.com/education/awseducate/) ou encore [AWS SkillBuilder](https://explore.skillbuilder.aws/learn), la [documentation AWS](https://docs.aws.amazon.com/) qui est très bien détaillée, les ateliers pratiques appelés “[Workshops](https://workshops.aws/)”, les livres blancs appelés "[Whitepapers](https://aws.amazon.com/whitepapers/)", les études de cas ([case studies](https://aws.amazon.com/solutions/case-studies)) ou encore les conférences ([AWS Events](https://aws.amazon.com/events/)) disponibles sur Twitch ou Youtube,…etc. Les ressources sont énormes et couvrent tout. 
+
+Mais vous avez toujours l’impression et c’est mon impression que ces ressources sont inanimées… C’est bien construit, bien designé avec de très bonnes illustrations mais lorsque vous terminez un cours, vous avez toujours l’impression d’avoir effleuré la surface.
+
+**L'une des choses importantes que j'ai apprises dans la vie est ceci : la critique est toujours très facile**. J'aurai pu aller sur les réseaux sociaux poster une note incendiaire, ou même faire une vidéo la dessus. Mais j'ai préféré me lancer pour proposer les choses tel que je le veux, avec **mon niveau de compréhension actuel**. Après tout, c'est facile de proposer aujourd'hui : ouvrir un blog ou créer une chaîne Youtube se fait gratuitement en quelques minutes.
+
+J'insiste sur le terme “niveau de compréhension actuel” car ce guide est appelé à évoluer et a être remis en question, en fonction de mes connaissances et des critiques constructives que je pourrais recevoir de la communauté, si une communauté se crée autour de ce projet.
+
+Je reviens au niveau des frustrations que j'ai ressenti avec AWS. Je tiens à préciser qu'elles sont personnelles et ne reflètent pas nécessairement ce que d'autres, aux niveaux de compréhension différents du mien, peuvent ressentir. C'est là où entre en jeu les ateliers pratiques, les fameux *[workshops](http://www.workshops.aws/)*. Ces workshops ou ateliers pratiques sont censés donner vie, donner sens à tout ce que vous avez vu ou lu, vous permettre de dépasser le balayage de surface. 
+
+Et c'est principalement dans ce secteur qu’est né mes frustrations et conséquemment cette chaîne. **A chaque fois que je "*pratiquais*" un atelier, un workshop, j'avais l'impression d'être un robot, avec du “copier coller”**… C'est clair que lorsque vous suivez le workshop jusqu'au bout et que vous obtenez les mêmes résultats, les mêmes fenêtres que le workshop, vous avez un sentiment de satisfaction et vous gagnez en confiance. Cela, je l'ai ressenti aussi, mais avec toujours un petit pincement au cœur. Dans un coin de ma tête, je me demandais toujours si je serai capable de résoudre un tel problème par moi même. Mais j'avais déjà la réponse, la vérité était en face de moi mais je ne voulais pas la regarder. J'ai enfin décider de l'affronter par la création de cette chaîne.
+
+## 3- L'objectif principal de la chaîne
+
+Ma chaîne Youtube accompagne **les employés, experts, consultants en quête de changement de carrière** qui veulent devenir **Architecte de solutions AWS** ou "**Architecte Cloud AWS**" comme on en voit dans plusieurs annonces d'emploi.
+
+En quoi consiste cet accompagnement ? Quel est son contenu ? Très simple :
+
+- leur offrir un parcours de formation qui leur permet de passer leur certification à travers des présentations théoriques, des ateliers pratiques, des quiz ou questionnaires.
+- leur présenter des cas pratiques qui partent de zéro pour une application complète déployée sur AWS.
+- leur donner les fondamentaux nécessaires qui, au delà de la certification, leur permettra de comprendre non seulement AWS en particulier mais le Cloud en général qui a un très grand avenir.
+
+Au delà de l'accompagnement, il y a le volet "**Communauté**" que je souhaite bâtir puisque cela n'existe pratiquement pas en zone francophone mais c'est un volet qui sera développé bien plus tard. Le plus important actuellement, c'est de créer assez de contenus pour regrouper tous ceux qui partagent la vision de cette chaîne qui va bien au delà de la certification.
+
+## 4- Les thèmes à aborder
+
+Bien que la fonction d’Architecte de solutions AWS ne se résume pas à l’obtention d’une certification, il est important de passer l’examen de certification comme point de départ. Et à ce titre, AWS, promoteur de la certification, a établi un plan d’apprentissage pour les architectes de solutions. 
+
+Comme cela est précisé sur [leur site web](https://aws.amazon.com/fr/training/learn-about/architect/), ce plan d’apprentissage aide à développer des **compétences techniques** pour la fonction d’Architecte de solutions et aide aussi à la **préparation aux examens de certification** *Architecte de solutions AWS Associate*.
+
+Conséquemment, nous allons débuter notre aventure en balayant ce plan d’apprentissage. L’avantage ici est que l’ensemble des cours proposés par AWS peut être suivi gratuitement, sur leur plateforme de formation [AWS Skill Builder](https://explore.skillbuilder.aws/learn/public/learning_plan/view/1044/solutions-architect-learning-plan?la=cta&cta=topbanner)… C’est un cursus élaboré par les experts d’AWS que vous pouvez suivre à votre ryhtme. Il y a aussi d’autres options, comme la [formation en présentiel](https://aws.amazon.com/fr/training/classroom/architecting-on-aws/?ct=sec&sec=rolesol) si vous souhaitez avoir la possibilité de poser des questions et de recevoir des commentaires en temps réel. Mais là, c’est payant.
+
+Si on parcoure les cours proposés sur [AWS Skill Builder](https://explore.skillbuilder.aws/learn/public/learning_plan/view/1044/solutions-architect-learning-plan?la=cta&cta=topbanner), on constate que on en a pour plus de 62 heures à consommer au moment où j’écris ces lignes. Et à chaque innovation ou mise à jour d’un service AWS, le programme est ajusté. Et comme vous pouvez le voir, ce plan recoupe les [différentes catégories de produits d’AWS](https://aws.amazon.com/fr/products/) : 
+
+- Les Fondamentaux
+- Sécurité, identité et conformité
+- Calcul et Stockage
+- Mise en réseau et diffusion de contenu
+- Gestion et gouvernance
+- Serverless (*qui en réalité n’est pas une catégorie propre de produits mais une révolution. Nous allons le voir plus tard dans ce cours*)
+- Conteneurs
+- Migration et transfert
+- Gestion financière dans le cloud
+
+Tout ce parcours, de mon point de vue, ne vise pas à faire de vous des virtuoses de tous ces produits. Ce serait impossible. Même à AWS, ils ont des architectes bien spécialisés. Le but principal est de vous donner la capacité de proposer une solution adaptée à la demande d’un client intéressé par le cloud.
+
+## 5- Qu’est ce qu’on gagne à travers cette certification ?
+
+Lorsque vous parcourez les pages de vente des formations pour la certification AWS d’architecte de solutions, on vous vend le rêve de décrocher un emploi avec votre certification. Rien n’est plus loin de la réalité. Vous n’avez qu’à faire un tour du côté de LinkedIn pour vous faire une idée du nombre de certifiés, double, triple, voire quadruple certifiés qui galèrent pour trouver un emploi. Ce n’est pas un hasard qu’un projet comme le “[Cloud Project Bootcamp](https://aws.cloudprojectbootcamp.com/)” ou encore le livre de Forrest Brazeal “[Cloud Resume Challenge](https://cloudresumechallenge.dev/)” ont tellement de succès. Ces projets visent à combler le gap entre le savoir et le savoir faire.
+
+<Image src={designSystem} alt="" />
+
+Pour ma part, je pense qu’en tant que développeur autoapprenant, sans background ou diplôme en IT, il s’agit juste **d’augmenter votre surface d’opportunités** en obtenant cette certification et à ce titre, je vous conseille de lire l’article de Swyx Wang intitulé “[How to Create Luck](https://www.swyx.io/create-luck)”, qu’on peut traduire par “*Comment Créer la Chance*”. Dans cet article, il développe l’idée selon laquelle **vous pouvez créer les conditions optimales pour que ce qui est communément appelé chance vous arrive**. Je partage l’idée de cet article et je pense que la certification fait partie de ces conditions si vous voulez changer de carrière et devenir “**Architecte Cloud AWS**”. Bien sûr, cela n’est pas la seule mais c’est l’une, indispensable pour être au moins sur la ligne de départ.
+
+Pour terminer, je rappelle que la chaîne Youtube accompagne **les employés, experts, consultants en quête de changement de carrière** qui veulent devenir **Architecte de solutions AWS** ou "**Architecte Cloud AWS**". Dans la prochaine note, on va justement aborder ce que signifie "**Devenir Architecte de Solutions AWS**".
+
+## 6- Liens cités dans cet épisode
+
+- La page “[AWS Certified Solutions Architect – Associate](https://aws.amazon.com/fr/certification/certified-solutions-architect-associate/)”
+- Les ressources AWS : la formation avec [AWS Educate](https://aws.amazon.com/education/awseducate/) ou encore [AWS SkillBuilder](https://explore.skillbuilder.aws/learn), la [documentation AWS](https://docs.aws.amazon.com/), les ateliers pratiques appelés “[Workshops](https://workshops.aws/)”, les livres blancs appelés "[Whitepapers](https://aws.amazon.com/whitepapers/)", les études de cas ([case studies](https://aws.amazon.com/solutions/case-studies)) ou encore les conférences ([AWS Events](https://aws.amazon.com/events/)) disponibles aussi sur [Twitch](https://www.twitch.tv/aws) ou [Youtube](https://www.youtube.com/channel/UCd6MoB9NC6uYN2grvUNT-Zg).
+- Les [différentes catégories de produits d’AWS](https://aws.amazon.com/fr/products/)
+- Le “[Cloud Project Bootcamp](https://aws.cloudprojectbootcamp.com/)” de Andrew Brown,
+- Le livre à succès de Forrest Brazeal “[Cloud Resume Challenge](https://cloudresumechallenge.dev/)”
+- L’article de Swyx Wang intitulé “[How to Create Luck](https://www.swyx.io/create-luck)”
+
