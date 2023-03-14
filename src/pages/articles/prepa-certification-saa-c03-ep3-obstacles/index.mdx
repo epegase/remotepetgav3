@@ -1,0 +1,191 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import Image from 'next/future/image'
+import awsArchitecture from './AWS_Architecture.png'
+import studyGuide from './book-study-guide-saa-c03.png'
+import guideExamenCcp from './guide-examen-ccp.png'
+import keyPersonInfluence from './Key_Person_of_Influence_Book.png'
+import rssActualitesAws from './Nouveauts_AWS__Innovations_cloud_et_actualits.png'
+import presentationCertifBase from './presentation-certif-base-ccp.png'
+import presentationExamenArchitect from './presentation-examen-saa.png'
+import saaLearningPlan from './Solutions_Architect_Learning_Plan.png'
+
+export const meta = {
+  author: 'Duverger PETGA',
+  date: '2023-03-15',
+  title: 'Prépa Certification Architecte de solutions AWS | Ep.3 : Les Obstacles pour devenir Architecte Cloud ?',
+  description:
+    'cette note aborde les obstacles à surmonter pour devenir architecte Cloud AWS. Je présente plusieurs ressources pour se former, notamment des cours en ligne et je donne des conseils pour la préparation de l\'\examen. Je recommande également de pratiquer et de publier ses expérimentations comme je le fais à travers ce site, de se tenir informé des mises à jour et de mettre à jour son profil professionnel après l\'\obtention de la certification.',
+}
+
+export default (props) => <ArticleLayout meta={meta} {...props} />
+
+
+Bonjour et Bienvenue au Club des Architectes Cloud AWS… La chaîne Youtube dont l’ambition est de rassembler les architectes cloud AWS d’expression francophone sous une même bannière. 
+
+Aujourd’hui, je vais aborder un volet très important : **les problèmes qu'on peut rencontrer pour devenir architecte solutions AWS.** 
+
+C’est un point important qui est si peu abordé dans de nombreuses vidéos et publications mais au regard de mes débuts sans grandes connaissances informatiques, je vais lister ce que j’ai rencontré personnellement comme obstacles : 
+
+- on ne sait pas par où commencer
+- on ne sait pas quelles ressources prioriser
+- on ne sait pas comment ouvrir un compte AWS
+- on se sent submergé par le trop plein de thèmes à étudier
+- on ne sait pas quand est ce que on sera prêt pour passer à l'examen
+- on ne sait pas comment se déroule l'examen
+- que faire après l'obtention de la certification
+- comment faire devant les mises à jour permanentes de produits et services
+
+Je vais parcourir ces points et donner mon avis là dessus, un avis bref.
+
+## 1- On ne sait pas par où commencer
+
+En règle générale, Amazon recommande à tous ceux qui sont nouveau dans le cloud de faire la certification de base, le certificat *[AWS Certified Cloud Practitioner](https://aws.amazon.com/fr/certification/certified-cloud-practitioner)*… pour se frotter aux différents produits et services d’Amazon. 
+
+<Image src={presentationCertifBase} alt="présentation certification de base" />
+
+Bien que cette certification présente, parmi les candidats idéals pour la passer, ceux “*issus d'un milieu non informatique et qui explorent une carrière dans le cloud AWS*”, je crains que cela ne soit pas suffisant au regard de ce qui vous attend si vous voulez pousser loin votre rôle d’architecte cloud AWS. 
+
+Si on jette un coup d’oeil au [guide de l’examen](https://d1.awsstatic.com/fr_FR/training-and-certification/docs-cloud-practitioner/AWS-Certified-Cloud-Practitioner_Exam-Guide.pdf), on se demande bien comment une personne issue du milieu non informatique peut répondre à ce qui est attendu, s’il ne tombe pas dans la mémorisation.
+
+<Image src={guideExamenCcp} alt="guide examen certification de base" />
+
+Pour ma part, une personne issue d’un milieu non informatique ne pourra recourir qu’à la mémorisation pour passer cet examen.
+
+Si vous êtes plutôt dans la compréhension, il vous faut, en plus de ce que présente AWS, d’autres fondamentaux comme : 
+
+- Comprendre comment Internet fonctionne,
+- Comprendre comment une application web fonctionne,
+- Comprendre les systèmes distribués.
+
+Il ne s’agit pas d’avoir une connaissance encyclopédique de ces fondamentaux mais d’avoir au moins les grandes idées, une vue générale du domaine. C’est cela qui vous permettra de comprendre l’offre de produits et services d’Amazon Web Services, d’avoir une idée du “POURQUOI”, d’avoir une idée de quels problèmes AWS cherche à résoudre en proposant ces produits et services.
+
+De mon point de vue, c’est ce manque de fondamentaux qui amène nombre d’apprenants à s’étonner de l’offre d’AWS qui porte sur plus de 200 produits et services. Chaque produit, chaque service a une cible bien précise et résoud un problème bien précis. Et c’est mieux ainsi. 
+
+<aside>
+💡 Il faudra produire une vidéo sur la **différence entre un produit AWS et une solution AWS**
+
+</aside>
+
+## 2- On ne sait pas quelles ressources prioriser
+
+AWS investit énormément dans la formation avec [AWS Educate](https://aws.amazon.com/education/awseducate/) ou encore [AWS SkillBuilder](https://explore.skillbuilder.aws/learn), la [documentation AWS](https://docs.aws.amazon.com/) qui est très bien détaillée, les ateliers pratiques appelés “[Workshops](https://workshops.aws/)”, les livres blancs appelés "[Whitepapers](https://aws.amazon.com/whitepapers/)", les études de cas ([case studies](https://aws.amazon.com/solutions/case-studies)) ou encore les conférences ([AWS Events](https://aws.amazon.com/events/)) disponibles sur Twitch ou Youtube,…etc. Les ressources sont énormes et couvrent tout.
+
+A côte de celà, vous avez des cours très populaires sur Udemy comme : 
+
+- le “[AWS Certified Solutions Architect Associate 2022 – SAA-C03](https://www.udemy.com/course/aws-certified-solutions-architect-associate-certification-saa-c03/)” de Jon Bonso,
+- le “[Ultimate AWS Certified Solutions Architect Associate SAA-C03](https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c03/)” de Stephane Maarek,
+- le “[AWS Certified Solutions Architect Associate Training SAA-C03](https://www.udemy.com/course/aws-certified-solutions-architect-associate-hands-on/)” de Neal Davis,
+- le “[AWS Certified Solutions Architect Associate - SAA C03](https://www.udemy.com/course/aws-certified-solutions-architect-associate-step-by-step/)” de Ranga Karanam.
+
+A côté de cela, il faut noter l’excellent cours d’Adrian Cantrill “****[AWS Certified Solutions Architect - Associate (SAA-C03)](https://learn.cantrill.io/p/aws-certified-solutions-architect-associate-saa-c03)”.** Vous avez d’autres pleins d’autres sites de formation comme [Cloudacademy](https://cloudacademy.com/), [A Cloud Guru](https://acloudguru.com/learning-paths/aws-architect) ou encore [Pluralsight](https://www.pluralsight.com/) pour ne citer que quelques uns qui offrent des parcours de formation pour ce rôle.
+
+Les livres ou “*study guide*”, on en trouve à la pelle et chaque éditeur s’arrange à mettre à jour l’édition lorsque l’environnement le commande… comme ce [livre](https://www.wiley.com/en-us/AWS+Certified+Solutions+Architect+Study+Guide+with+900+Practice+Test+Questions:+Associate+(SAA+C03)+Exam,+4th+Edition-p-9781119982623) qui en est à sa quatrième édition…
+
+<Image src={studyGuide} alt="livre préparation à la certification" />
+
+Devant le trop plein de ressources, on peut être perdu et se retrouver à rechercher la meilleure ressource, la ressource idéale. La réponse simple est qu’il n y a pas de ressource idéale et le temps perdu a rechercher la ressource idéale peut être mis à contribution pour avancer. 
+
+Je conseille à tout débutant de commencer par UNE SEULE RESSOURCE. Terminer complètement cette ressource, faire les examens tests et relever les gaps qu’on pourra combler avec les ressources gratuites d’AWS. S’il faut se laisser aller à une recommandation, commencez au choix soit par le cours d’Adrian Cantrill, soit le cours de Stephane Maarek. Cantrill a ma préférence.
+
+## 3- On ne sait pas comment ouvrir un compte AWS
+
+Si vous avez déjà ouvert un compte à Facebook, Instagram, Twitter ou autres, c’est le même principe. Il faut un nom d’utilisateur et l’adresse mail. Suivra une phase de vérification de votre email et la création de votre mot de passe.
+
+A la différence des autres sites où vous avez l’habitude de visiter, AWS demande d’ajouter un mode de paiement valide suivi d’une vérification de votre numéro de téléphone.
+
+Pour résumer, c’est pareil que les autres, sauf que les mesures de sécurité sont plus renforcées. Pour vous faire une idée précise de la procédure, vous pouvez consulter ce lien “****[Comment créer et activer un nouveau compte AWS ?](https://aws.amazon.com/fr/premiumsupport/knowledge-center/create-and-activate-aws-account/)”.** Je vais présenter plus tard une vidéo plus descriptive sur cette partie.
+
+Il faut noter que votre carte ne sera pas sollicitée pendant une longue période parce que [l’offre gratuite d’AWS](https://aws.amazon.com/fr/free/) est tellement riche que la majeure partie de votre expérimentation ne vous coûtera pas un seul centime.
+
+<aside>
+💡 Faire une vidéo sur la création et l’activation de compte AWS
+
+</aside>
+
+## 4- On se sent submergé par le trop plein de thèmes à étudier
+
+Oui, on peut se sentir submergé par le nombre de thèmes à étudier. Si on jette un coup d’oeil au [parcours d’apprentissage officiel d’AWS](https://explore.skillbuilder.aws/learn/public/learning_plan/view/1044/solutions-architect-learning-plan) établi sur sa plateforme de formation Skill Builder, cela marque plus de 62h à consommer… sans compter les ateliers pratiques à faire, la documentation à consulter ou les présentations vidéos à visionner
+
+<Image src={saaLearningPlan} alt="plan d'apprentissage AWS pour architectes" />
+
+Ce problème se pose parce que nous n’avons pas appris à apprendre et à ce titre, je vous conseille le cours gratuit de Barbara Oakley, ****[Apprendre comment apprendre](https://www.coursera.org/learn/learning-how-to-learn)****…
+
+Depuis que nous sommes tout petit, plusieurs personnes ont été habituées à un seul modèle d’apprentissage : présentation de l’enseignant, exercices donnés par l’enseignant,…etc. 
+
+La préparation d’un examen comme SAA-C03 modifie ce paradigme : c’est vous-même qui devez organiser votre emploi de temps, étudier sans constraintes, pratiquer sans guide, ni assistance et plus grave commettre des erreurs et les corriger soi-même. 
+
+C’est pour cela qu’un très gros marché qui singe le modèle d’apprentissage de base s’est développé et se porte plutôt bien.
+
+<aside>
+💡 Faire un résumé du cours gratuit de Barbara Oakley, “Apprendre à apprendre”
+
+</aside>
+
+## 5- On ne sait pas quand est ce que on sera prêt pour passer à l'examen
+
+Si je m’en tiens à mon expérience, même le jour j’allais composer, j’estimais que je n’étais pas prêt, qu’il me fallait encore trois (3) mois d’études… qu’il fallait que j’appronfondisse encore le côté sécurité d’AWS, que je devais suivre plusieurs cours sur les systèmes distribués, appronfondir DynamoDB ou encore concevoir et développer à partir de zéro une application complète utilisant une bonne partie des services AWS pour avoir une idée sur comment tout cela tenait… 
+
+Mais comme j’avais fixé la date bien avant et je ne voulais pas terminer l’année 2022 sans un essai, j’y suis allé et c’est passé. Et là, j’ai compris que bien souvent, on est trop exigeant envers soi-même au point cela paralyse l’action. Etre exigeant est une bonne chose mais il faut se fixer des limites pour éviter de tomber dans ce piège.
+
+C’est pour cela que je recommande de fixer à six mois votre période d’études en **arrêtant votre date d’examen avant de débuter**.
+
+## 6- On ne sait pas comment se déroule l'examen
+
+Sur ce point, les choses sont claires. Un détour par [le site web de la certification](https://aws.amazon.com/fr/certification/certified-solutions-architect-associate/?nc1=h_ls) et vous avez toutes les informations. 
+
+<Image src={presentationExamenArchitect} alt="présentation examen architecte cloud AWS" />
+
+65 questions étalées sur 130mn, soit 2h10, à raison de 2mn par question. Mais raisonner en moyenne serait suicidaire car il faut tenir compte du niveau de difficulté des questions. Au début de l’examen, les questions sont le plus souvent abordables et montent en complexité au fur à mesure que le temps passe. Comme il n y a pas de pénalité pour de mauvaises réponses ou de non réponses, il vaut mieux jouer sur le niveau de difficulté des questions en rapport avec votre niveau de connaissances. 
+
+## 7- Que faire après l'obtention de la certification ?
+
+Après l’adoption de la certification, vous devez d’abord opérer des **actions de forme** comme : 
+
+- mettre à jour votre profil LinkedIn,
+- mettre à jour votre CV,
+- partager l’information sur tous vos réseaux sociaux (Facebook, Twitter et autres)
+
+Au delà de la forme, **il faut aborder le fond**. Comme je l’ai dit précédemment, être certifié ne signifie pas que vous êtes apte pour le boulot. Pratiquez, pratiquez. Je conseille de faire ce que les anglo-saxons appellent “*reverse engineering”* des [architectures de référence](https://aws.amazon.com/fr/architecture). Pourquoi ? Ces architectures ont été établies par des architectes chevronnés et si vous arrivez à déconstruire cela, vous allez y gagner énormément en expertise. 
+
+<Image src={awsArchitecture} alt="les solutions architectures AWS" />
+
+Il ne s’agit pas de faire cela dans votre chambre. Publier le contenu de vos expérimentations sur un site web ou sur Youtube. Ce point sera aussi fait durant ce parcours d’apprentissage.
+
+Je conseille d’avoir à vos côtés le livre de Daniel Prestley, [Key Person of Influence](https://my.dent.global/uk/kpi-download/), qui est gratuitement téléchargeable. 
+
+<Image src={keyPersonInfluence} alt="le livre pour agrandir les opportunités" />
+
+C’est un guide qui peut vous amener bien loin dans vos objectifs. C’est un livre qui n’est pas loin de moi que je lis et relis pour ne pas dévier de ma trajectoire et je vous conseille d’en faire pareil avant et après votre certification.
+
+## 8- Comment faire devant les mises à jour permanentes de produits et services
+
+Très simple : abonnez vous aux [flux d’informations des publications d’AWS](https://aws.amazon.com/fr/new/) avec une solution comme [Feedly](https://feedly.com/). Cela vous permettra d’être à jour. 
+
+<Image src={rssActualitesAws} alt="suivre les actualités du cloud AWS" />
+
+Il y aussi les [publications des blogs AWS](https://aws.amazon.com/fr/blogs/aws/) que vous pouvez exploiter. La possibilité de sélectionner des thèmes précis est très important, puisque vous pouvez juste vous concentrer par exemple sur les [publications de blog qui ne concernent que l’architecture](https://aws.amazon.com/fr/blogs/architecture/).
+
+Vous pouvez aussi vous abonner aux newsletters, chaînes Youtube et autres sources de contenus qui balaient l’écosystème d’AWS. Et surtout apprenez à lire la documentation : c’est la meilleure source d’information pour tout produit ou service.
+
+C’est clair qu’il y a d’autres questions qui peuvent apparaître durant votre parcours. J’ai fait l’effort de répondre à ce qui revenait régulièrement mais si vous avez d’autres questions, je serais heureux que vous partagiez cela avec d’autres apprenants.
+
+Dans la prochaine note, je vais aborder comment j’ai vécu ce parcours, une sorte de retour d’expérience.
+
+## 9- Liens cités dans cette note
+
+- La page de la certification de base  [AWS Certified Cloud Practitioner](https://aws.amazon.com/fr/certification/certified-cloud-practitioner),
+- Le [guide de l’examen](https://d1.awsstatic.com/fr_FR/training-and-certification/docs-cloud-practitioner/AWS-Certified-Cloud-Practitioner_Exam-Guide.pdf) de la certification de base,
+- L’excellent cours d’Adrian Cantrill “****[AWS Certified Solutions Architect - Associate (SAA-C03)](https://learn.cantrill.io/p/aws-certified-solutions-architect-associate-saa-c03)”**
+- Quelques cours populaires disponibles à prix abordables sur la plateforme Udemy, pour la préparation à la certification Architecte de Solutions AWS :
+    - le “[AWS Certified Solutions Architect Associate 2022 – SAA-C03](https://www.udemy.com/course/aws-certified-solutions-architect-associate-certification-saa-c03/)” de Jon Bonso,
+    - le “[Ultimate AWS Certified Solutions Architect Associate SAA-C03](https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c03/)” de Stephane Maarek,
+    - le “[AWS Certified Solutions Architect Associate Training SAA-C03](https://www.udemy.com/course/aws-certified-solutions-architect-associate-hands-on/)” de Neal Davis,
+    - le “[AWS Certified Solutions Architect Associate - SAA C03](https://www.udemy.com/course/aws-certified-solutions-architect-associate-step-by-step/)” de Ranga Karanam.
+- “****[Comment créer et activer un nouveau compte AWS ?](https://aws.amazon.com/fr/premiumsupport/knowledge-center/create-and-activate-aws-account/)”,**
+- Le [parcours d’apprentissage officiel d’AWS](https://explore.skillbuilder.aws/learn/public/learning_plan/view/1044/solutions-architect-learning-plan) que vous pouvez suivre pour vous préparer à la certification d’Architecte de Solutions AWS. Il est gratuit.
+- Le cours gratuit de Barbara Oakley, ****[Apprendre comment apprendre](https://www.coursera.org/learn/learning-how-to-learn)****
+- Parcourir [l’offre gratuite d’AWS](https://aws.amazon.com/fr/free/),
+- Les  [architectures de référence](https://aws.amazon.com/fr/architecture) disponibles sur le site web d’AWS, conçues par des professionnels, que vous pouvez consulter pour voir à qupoi vous attendre.
+- Le livre de Daniel Prestley, [Key Person of Influence](https://my.dent.global/uk/kpi-download/), qui est gratuitement téléchargeable, qui vous permettra d’avoir une feuille de route pour construire votre image d’expert.
+- Abonnez-vous aux [flux d’informations des publications d’AWS](https://aws.amazon.com/fr/new/) avec une solution comme [Feedly](https://feedly.com/),
+- Consultez les [publications des blogs AWS](https://aws.amazon.com/fr/blogs/aws/)

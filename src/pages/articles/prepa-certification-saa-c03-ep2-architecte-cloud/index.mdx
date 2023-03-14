@@ -1,0 +1,150 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import Image from 'next/future/image'
+import annonceOrange from './annonce-orange-architecte.png'
+import annonceAWS from './annonce-aws-architecte.png'
+import annonceAWSdetails from './annonce-aws-architecte-details.png'
+import annonceAccenture from './annonce-accenture-architecte.png'
+import annonceAWSIntern from './annonce-aws-architecte-intern.png'
+import videoYoutubeDuties from './video-youtube-what-SA-do.png'
+import videoYoutubeDo from './video-youtube-what-sa-actually-do.png'
+import videoYoutubeNotovernight from "./video-youtube-sa-senior-role.png"
+import videoYoutubeRole from "./video-youtube-what-a-sa.png"
+
+export const meta = {
+  author: 'Duverger PETGA',
+  date: '2023-03-14',
+  title: 'Prépa Certification Architecte de solutions AWS | Ep.2 : C\'\est quoi un Architecte de solutions AWS ?',
+  description:
+    'Cette note aborde la question de ce qu\'\est un architecte de solutions AWS, en se basant sur des annonces d\'\emploi, des publications de blogs et des témoignages d\'\architectes cloud AWS. La certification est importante, mais elle ne suffit pas à elle seule pour devenir un architecte cloud. Le rôle d\'\ un architecte cloud est d\'\ accélérer l\'\ adoption des services AWS, ce qui nécessite des compétences techniques, relationnelles et de vente.',
+}
+
+export default (props) => <ArticleLayout meta={meta} {...props} />
+
+
+Bonjour et Bienvenue au Club des Architectes Cloud AWS… La chaîne Youtube dont l’ambition est de rassembler les architectes cloud AWS d’expression francophone sous une même bannière. 
+
+Comme je l’ai précisé lors de la précédente vidéo, ma chaîne Youtube apprend les employés, experts, consultants en quête de changement de carrière comment devenir architecte de solutions AWS. Alors, la question qu’on est en droit de se poser est celle de savoir ce que signifie "**Devenir Architecte de Solutions AWS**" ? Est-ce qu’il s’agit : 
+
+- d’être certifié ?
+- d’avoir un job ?
+- ou de disposer de connaissances précises ?
+
+Pour répondre à ces questions et à l’idée générale de cette note, j’ai dû recourir à l’analyse de sources extraordinaires qu’Internet nous offre aujourd’hui à savoir : 
+
+- les annonces d’emploi,
+- les publications sur les blogs et sites internet d’architectes cloud,
+- les retours d’expérience d’architectes cloud AWS que vous pouvez balayer sur Internet et principalement sur Youtube.
+
+A travers ces recueils et par recoupement, vous pouvez vous faire une idée sur certaines questions mais pas les fermer complètement car le cloud évolue très vite et conséquemment le rôle d’architecte cloud aussi.
+
+Commençons donc par la première question.
+
+## 1- Faut-il être certifié pour devenir Architecte Cloud AWS ?
+
+Il est clair que lorsqu’on parcoure les annonces d’emploi, cela ne fait aucun doute que la certification a sa place… A titre d’exemple, vous pouvez voir une capture d’écran d’une [annonce d’architecte cloud AWS](https://orange.jobs/jobs/v3/offers/116360)… 
+
+<Image src={annonceOrange} alt="annonce emploi architecte par Orange" />
+
+Vous voyez bien que cela est recommandé. Il y a une précision que je souhaite apporter : vous verrez plusieurs annonces qui mentionnent plutôt “*Architecte Cloud AWS*”… Ce que AWS nomme “*Architecte de Solutions AWS*”. Il ne faut pas se fier aux titres mais regarder plutôt le contenu des annonces.
+
+La certification ne fait pas de vous un architecte cloud mais vous donne des compétences techniques générales et comme le rôle d’architecte cloud va bien au delà des compétences techniques, être certifié n’implique pas nécessairement que vous puissez vous qualifier ou assumer le rôle d’architecte cloud.
+
+## 2- Le rôle d’Architecte Cloud AWS
+
+Pour commencer à se faire une idée du rôle d’architecte de solutions AWS, il faut aller à la source. AWS elle même recrute des architectes de solutions et en jettant un coup d’oeil à [leur page d’annonces d’emploi](https://www.amazon.jobs/fr/job_categories/solutions-architect), on se fait une idée…
+
+<Image src={annonceAWS} alt="annonce emploi architecte à AWS" />
+
+Cette capture d’écran est claire : **le principal rôle d’un architecte cloud est d’accélérer l’adoption des services que propose AWS**.
+
+En parcourant l’annonce, on se fait une idée des attentes de ce rôle…
+
+<Image src={annonceAWSdetails} alt="détails annonce emploi architecte à AWS" />
+
+Je peux lister cela : 
+
+- connaissances techniques approfondies
+- compétences relationnelles
+- expérience ou expertise en conseils ou de ventes de logiciels ou de technologies
+- capacité de réfléchir de manière stratégique à propos des activités
+- élaborer des définitions techniques concernant les objectifs des clients dans des situations complexes
+- développer des stratégies de solution
+- capable de rédiger des codes
+- élaborer des architectures évolutives, flexibles et résistantes qui permettent de résoudre les problèmes commerciaux des clients et d’accélérer l’adoption de nos nouveaux services
+- l’architecte de solutions aidera les organisations à comprendre les meilleures pratiques relatives à l’intégration de plateformes
+
+A côté de cela, si on parcoure les annonces de grosses organisations comme [Accenture](https://www.accenture.com/fr-fr/careers/jobdetails?id=R00083910_fr-fr) ou [CapGemini](https://jobs.capgemini.com/fr-fr/job/Pays-de-la-Loire-Architecte-Cloud-Nantes-HF-R/616335201/) qui recrutent quantité d’architectes cloud pour leurs missions de consulting, on observe plus un contenu très technique dans les annonces…
+
+<Image src={annonceAccenture} alt="annonce emploi architecte à Accenture" />
+
+Si vous balayez quantité d’annonces d’emploi, vous verrez que techniquement, ce qui est attendu recoupe le curriculum de la certification mais en plus de cela, il est demandé des compétences relationnelles car le poste d’architecte, au delà de la technique, est un poste de “vente”… vous vendez une technologie, vous facilitez l’adoption d’une technologie par un client et vous l’accompagner dans la mise en place de celle-ci. C’est pour cela qu’il est difficile d’obtenir un emploi là dessus en junior, en débutant. C’est la raison pour laquelle vous n’allez trouver que sur le site d’Amazon des annonces “*[Associate Solutions Architect Intern](https://amazon.jobs/fr/jobs/2311422/associate-solutions-architect-intern)*”, des annonces pour stagiaires et/ou débutants… 
+
+<Image src={annonceAWSIntern} alt="détails annonce emploi architecte intern à AWS" />
+
+Ailleurs là, ce sont les offres pour “senior” en grande majorité, lorsque vous parcourez le contenu des annonces.
+
+Ce que vous devez retenir ici est que votre rôle en tant qu’architecte cloud AWS est d’accélerer l’adoption des services AWS. Il ne s’agit pas de se vanter de ses prouesses techniques ou de sa certification mais de **savoir comment vendre un service et accompagner un partenaire ou une entreprise dans la mise en place de ce service**.
+
+<aside>
+💡 Il faudra produire une vidéo assez générique sur comment vendre un service
+
+</aside>
+
+Pour étayer ou remettre cela en cause, nous allons solliciter l’avis des professionnels et à ce titre, Youtube regorge de vidéos de vrais professionnels, d’architectes cloud qui présentent leurs expériences. C’est une mine d’informations qu’on ne peut pas négliger.
+
+## 3- Les retours d’expérience d’architectes cloud AWS
+
+J’ai donc entrepris de balayer les vidéos de ces professionnels et extraire l’essentiel de leur message.
+
+J’ai donc entrepris de balayer les vidéos de ces professionnels et extraire l’essentiel de leur message. Il faut noter que ce ne sont pas les seules vidéos disponibles. Vous pouvez en trouver d'autres et ce serait mieux de faire l'exercice pour vous en faire une idée.
+
+Vous avez là mes notes en anglais que je vais rapidement commenter.
+
+La première vidéo dont le lien se trouve ci-bas est celle d’un professionnel, Ilyas Bakouch, passé par AWS et qui présente à travers cet interview le rôle et les responsabilités d’un architecte solutions. On voit bien que cela recoupe ce qu’on a abordé plus haut à savoir accompagner techniquement les clients.
+
+• **[What Does a Solutions Architect Do? | Job Duties and Responsibilities](https://www.youtube.com/watch?v=tGbVgbpqb5Y)**
+
+<Image src={videoYoutubeDuties} alt="retour expérience architectes cloud" />
+
+La deuxième vidéo est celle de Lucy Wang qui anime la chaîne [Tech With Lucy](https://www.youtube.com/c/techwithlucy) et qui est passé aussi par AWS en tant qu’achitecte de solutions AWS. On retrouve le même point à savoir que l’architecte est un conseiller, un accompagnateur technique pour les clients en quêtes de solutions.
+
+• **[What Does An AWS Solutions Architect Actually Do?](https://www.youtube.com/watch?v=xPZt3Z9nkT0)**
+
+<Image src={videoYoutubeDo} alt="retour expérience architectes cloud" />
+
+Dans une vidéo, Neal Davis, le promoteur de [Digital Cloud Training](https://digitalcloud.training/), rappelle que le poste d’architecte cloud n’est pas un poste pour “*junior*”, pour ceux qui sont en début de carrière car la responsabilité de concevoir et déployer des applications d’entreprises demande de l’expérience.
+
+• **[Why you can't become a Cloud Solutions Architect overnight](https://www.youtube.com/watch?v=vEVUhDgXnG0)**
+
+<Image src={videoYoutubeNotovernight} alt="retour expérience architectes cloud" />
+
+Et que dire de la vidéo de Trevor Spires qu’on ne présente plus puisqu’il occupait il y a peu cette fonction à AWS et animait les formations gratuites pour ceux qui voulaient passer la certification. C’est le même constat : l’architecte offre des solutions techniques aux problèmes d’entreprise et surtout doit avoir une bonne idée sur comment une entreprise achète ou adopte une technologie.
+
+• **[What is a Solutions Architect? | SA Role Explained](https://www.youtube.com/watch?v=WI5XaZcEoJI)**
+
+<Image src={videoYoutubeRole} alt="retour expérience architectes cloud" />
+
+Au regard de toutes ces vidéos, vous comprenez que le chemin est bien long pour se qualifier d’architecte cloud. **L’important ici est d’embrasser les défis étape par étape**. 
+
+Pour un début, c’est la connaissance, le savoir qu’il vous faut. Donc c’est l’obtention de la certification qui doit être votre seul défi.
+
+Après, il vous faudra du savoir-faire et là, vous pouvez recourir aux initiatives comme  “[Cloud Project Bootcamp](https://aws.cloudprojectbootcamp.com/)” d’Andrew Brown ou le  “[Cloud Resume Challenge](https://cloudresumechallenge.dev/)” de Forrest Brazeal.
+
+A la fin, il faut faire du “*branding personnel*” en publiant régulièrement des contenus dans un blog ou une page web, en publiant des vidéos sur Youtube si vous avez la préférence pour la vidéo, en soignant votre profil sur les réseaux sociaux (Facebook, Twitter, LinkedIn,…etc), en animant des séances de formation, participant aux conférences organisées par les experts reconnus du domaine, en étant présent dans les communautés de professionnels que ce soit sur [Discord](https://discord.com/) ou [Slack](https://slack.com/). Comme ressource qui peut vous guider dans cette phase où vous devez établir publiquement votre expertise pour attirer les opportunités, je vous conseille le livre de Daniel Priestley titré “[Key Person of Influence](https://danielpriestley.com/key-person-of-influence-book/)” qui est librement téléchargeable.
+
+Comme je l’ai dit plus haut, allez y étape par étape et ne tombez pas dans le perfectionnisme. Rien ne sera parfait et vous allez commettre des erreurs. L’essentiel est de travailler chaque jour pour avancer. C’est le prix à payer pour être architecte cloud.
+
+Dans la prochaine note, on abordera les obstacles que vous pouvez rencontrer pour devenir “architecte cloud”. Bien qu’il soit nécessaire d’aborder les défis étape par étape, je dois au moins vous donner une idée sur les embûches qui peuvent se dresser sur votre chemin.
+
+## 4- Liens cités dans cet article
+
+- La page d’annonce d’emploi d’AWS pour les architectes cloud : Cliquer [ICI](https://www.amazon.jobs/fr/job_categories/solutions-architect)
+- Les grosses boîtes comme [Accenture](https://www.accenture.com/fr-fr/careers/jobdetails?id=R00083910_fr-fr) ou [CapGemini](https://jobs.capgemini.com/fr-fr/job/Pays-de-la-Loire-Architecte-Cloud-Nantes-HF-R/616335201/) recrutent énormément d’architectes cloud pour les missions. Il y a aussi un aggrégateur d’annonces d’emplois comme [Indeed](https://www.indeed.com/) où vous pouvez trouver de nombreuses annonces pour “architecte cloud AWS”…
+- **[What Does a Solutions Architect Do? | Job Duties and Responsibilities](https://www.youtube.com/watch?v=tGbVgbpqb5Y)** par ****Ilyas Bakouch
+- **[What Does An AWS Solutions Architect Actually Do?](https://www.youtube.com/watch?v=xPZt3Z9nkT0)** par Lucy Wang
+- • **[What skills are needed to become an AWS Solutions Architect?](https://www.youtube.com/watch?v=OJVAEh77QV8)** par Lucy Wang
+- **[Why you can't become a Cloud Solutions Architect overnight](https://www.youtube.com/watch?v=vEVUhDgXnG0)** par Neal Davis
+- **[What is a Solutions Architect? | SA Role Explained](https://www.youtube.com/watch?v=WI5XaZcEoJI)** par Trevor Spires
+- Le “[Cloud Project Bootcamp](https://aws.cloudprojectbootcamp.com/)” d’Andrew Brown
+- Le  “[Cloud Resume Challenge](https://cloudresumechallenge.dev/)” de Forrest Brazeal
+- Le livre gratuitement téléchargeable de Daniel Priestley “[Key Person of Influence](https://danielpriestley.com/key-person-of-influence-book/)”

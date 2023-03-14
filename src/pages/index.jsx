@@ -94,7 +94,7 @@ function Article({ article }) {
         {formatDate(article.date)}
       </Card.Eyebrow>
       <Card.Description>{article.description}</Card.Description>
-      <Card.Cta>Read article</Card.Cta>
+      <Card.Cta>Lire la Note</Card.Cta>
     </Card>
   )
 }
@@ -269,7 +269,7 @@ export default function Home({ articles }) {
           de sauter le pas et changer de carrière. Je suis fondateur de FaStyle, 
           une application de partage d&apos;astuces de beauté, mode et style. 
           Mes domaines d&apos;intérêt, au delà du Cloud, portent sur les systèmes distribués 
-          et l&apos;intelligence artificielle.
+          et l&apos;intelligence artificielle. Vous voulez me contacter directement ? écrivez-moi à duvergerpetga@gmail.com
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
