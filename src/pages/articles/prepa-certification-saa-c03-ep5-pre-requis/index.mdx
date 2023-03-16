@@ -1,0 +1,56 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import Image from 'next/future/image'
+import acantrillTweet from './acantrillTweet.png'
+import abrownTweet from './abrownTweet.png'
+
+export const meta = {
+  author: 'Duverger PETGA',
+  date: '2023-03-17',
+  title: 'Prépa Certification Architecte de solutions AWS | Ep.5 : Les Pré-Réquis',
+  description:
+    'J’aborde dans cette note les prérequis nécessaires pour ce cours de préparation à la certification SAA-C03. Il est important de maîtriser les fondamentaux avant de se lancer dans des configurations plus complexes. Il est également important de ne pas tomber dans le perfectionnisme et de se concentrer sur une seule ressource à la fois, tout en pratiquant activement pour renforcer ses connaissances.',
+}
+
+export default (props) => <ArticleLayout meta={meta} {...props} />
+
+Andrew Brown qui anime le [Free Cloud Project Bootcamp](https://aws.cloudprojectbootcamp.com/) a publié un tweet qui me permet d’amorcer le point central de cette note. Voyons d’abord le tweet en question : 
+
+<Image src={abrownTweet} alt="tweet andrew brown" />
+
+Adrian Cantrill a rebondi là dessus en allant plus loin, en proposant deux cours gratuits pour renforcer les fondamentaux : ****[Tech Fundamentals](https://learn.cantrill.io/p/tech-fundamentals)** et ****[Docker Fundamentals](https://learn.cantrill.io/p/docker-fundamentals).**
+
+<Image src={acantrillTweet} alt="tweet adrian cantrill" />
+ 
+
+Si vous voyez des personnes avec la certification la plus haute, la certification “**AWS Certified Solutions Architect – Professional”** qui sont incapables de faire des configurations de base, cela veut dire que les pré-requis ont été faussés dès le départ. Ils ont versés dans la mémorisation, fait quelques ateliers pratiques pour mieux mémoriser, fait des tests de certification en vente partout sur Internet et s’essayer une, deux ou même trois fois à la certification et forcément, la certification arrive.
+
+C’est pour cela que mon curriculum n’aborde pas AWS durant des mois : vous travaillez énormément sur les fondamentaux. J’insiste là dessus par mon expérience. J’ai commencé par AWS pendant deux mois et j’avais l’impression au fur et à mesure que j’avançais que c’était trop complexe, trop vaste. En réalité, je n’arrivais pas à tisser des liens entre tout ce que j’apprenais. Une fois que vous avez les fondamentaux, vous n’allez pas avoir de problème pour votre certification et même pour la suite. 
+
+Attention, cela ne veut pas dire que cela sera facile. NON. C’est juste qu’avec les fondamentaux, votre courbe d’apprentissage est moins longue. Et en plus, vous n’aurez aucun problème à lancer de petits projets qui feront la différence dans votre recherche d’emploi.
+
+**Alors, quels sont les pré-réquis pour ce cours ?**
+
+- Vous devez disposer d’un ordinateur,
+- avoir accès à Internet,
+- être rompu aux pratiques de base : savoir lire vos mails, travailler avec des logiciels, faire une recherche à Google ou autres, …etc.
+- avoir suivi le cours “**[CS50’s Introduction to Computer Science](https://cs50.harvard.edu/x/2023/)”**
+
+Le dernier point est très important. Il faut suivre ce cours. David Malan est un très grand pédagogue et si vous êtes assez persévérant pour terminer ce cours, vous aurez de bases solides pour la suite. Cela ne veut pas dire que vous allez saisir d’un coup tout ce qui va être dit dans ce cours : c’est impossible. L’important est d’avoir une idée générale, une vue d’ensemble.
+
+Même ce cours ne vous donnera qu’une vue d’ensemble. La majeure partie des thèmes abordés ici va nécessiter une recherche de votre part, une consultation d’autres ressources, des projets personnels. Si vous avez ce cours en vous disant que tout sera abordé au moindre détail, vous vous trompez. D’ailleurs, vous n’allez trouver aucune ressource sur Internet qui aborde tout dans le détail. Le simple HTML que j’aborderai dans la partie des fondamentaux de ce cours peut constituer à lui seul tout un cours de dizaines d’heures. Vous pouvez jeter un coup d’oeil à Youtube ou Udemy pour voir que c’est effectivement cela.
+
+Mon objectif est juste de vous présenter les différents chemins qu’emprunte les développeurs pour trouver des solutions aux différents problèmes qu’ils rencontrent.
+
+Une dernière chose avant qu’on se sépare. Quelques recommandations : 
+
+- **Ne tombez pas dans le perfectionnisme :** j’y suis tombé et même avant de passer ma certification, j’estimais toujours que je n’étais pas assez prêt… qu’il me fallait encore trois (3) mois ou plus mais c’est passé. Considérez tout ce que vous faîtes comme une expérimentation. Même cette chaîne Youtube est une expérimentation.
+- Ne tombez pas dans la boucle des tutoriels et cours : **COMMENCEZ TOUJOURS ET CONCENTREZ-VOUS SUR UNE SEULE RESSOURCE**. Et après, allez à la pratique. C’est dans la pratique que vous allez détecter des gaps dans votre connaissance. Ce qui vous permettra d’aller vers d’autres tutoriels ou cours en sachant ce que vous y chercher.
+- Les cours, tutoriels et tout ce que consommez comme ressources ne représentent que 20% de ce qu’il vous faut pour disposer de connaissances. La grande majorité de vos connaissances viendra de ce qu’on nomme le plus souvent l’apprentissage actif : ateliers pratiques, production personnelle de contenus dans un blog ou même sur Youtube, réseautage, animation de cours, lecture de la documentation, …etc.
+
+Dans la prochaine note, nous allons parcourir ce qui nous attendra durant les prochains mois. Bien évidemment, ce curriculum sera ajusté en fonction des réalités que je vais rencontrer durant ce parcours mais il est important de présenter ce que je compte faire en l’état actuel de mes connaissances.
+
+## Liens cités dans cette note
+
+- [**Free Cloud Project Bootcamp**](https://aws.cloudprojectbootcamp.com/) d’Andrew Brown,
+- Les cours gratuits d’Adrian Cantrill sur les fondamentaux : ****[Tech Fundamentals](https://learn.cantrill.io/p/tech-fundamentals)** et ****[Docker Fundamentals](https://learn.cantrill.io/p/docker-fundamentals).**
+- Le cours de base :  “**[CS50’s Introduction to Computer Science](https://cs50.harvard.edu/x/2023/)”**

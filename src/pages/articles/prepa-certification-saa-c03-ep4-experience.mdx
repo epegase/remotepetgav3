@@ -1,0 +1,149 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+
+export const meta = {
+  author: 'Duverger PETGA',
+  date: '2023-03-16',
+  title: 'Prépa Certification Architecte de solutions AWS | Ep.4 : Comment j\'\ai obtenu ma certification SAA-C03 en 6 mois',
+  description:
+    'Cette note propose un parcours en six mois pour obtenir la certification AWS Solutions Architect Associate. Je recommande des ressources pour apprendre les bases du développement web, comprendre comment fonctionne Internet, les systèmes distribués, la virtualisation, les conteneurs et microservices, ainsi que la sécurité et les concepts clés d\'\AWS. Je termine en encourageant tout aspirant architecte cloud à se concentrer sur une ressource à la fois et à prendre son temps pour bien assimiler les concepts. Je recommande également de partager vos expériences à travers les publications d’écrits ou de vidéos.',
+}
+
+export default (props) => <ArticleLayout meta={meta} {...props} />
+
+Bonjour et Bienvenue au Club des Architectes Cloud AWS… La chaîne Youtube dont l’ambition est de rassembler les architectes cloud AWS d’expression francophone sous une même bannière. 
+
+Dans cet épisode, je vais partager mon expérience sur la préparation et l'obtention de la certification [AWS Solutions Architect - Associate (SAA-C03)](https://aws.amazon.com/fr/certification/certified-solutions-architect-associate/) en six mois. **Il faut noter que mon parcours n’a pas été aussi linéaire que ce qui sera présenté par la suite.** 
+
+Par exemple, j’ai commencé par le [parcours d’apprentissage proposé par AWS](https://explore.skillbuilder.aws/learn/course/external/view/elearning/125/exam-readiness-aws-certified-solutions-architect-associate-digital?saa=sec&sec=prep), en jetant aussi un coup d’oeil au [guide de l’examen](https://d1.awsstatic.com/fr_FR/training-and-certification/docs-sa-assoc/AWS-Certified-Solutions-Architect-Associate_Exam-Guide.pdf) et au [ramp-up guide](https://d1.awsstatic.com/training-and-certification/ramp-up_guides/Ramp-Up_Guide_Architect.pdf)… pour me rendre compte après que je consommais des vidéos, je pratiquais mais c’était la **mémorisation et le copier-coller**. Il fallait aller au delà de cela. 
+
+J’ai trouvé un peu de réconfort avec le [cours d’Adrian Cantrill](https://learn.cantrill.io/p/aws-certified-solutions-architect-associate-saa-c03) mais je sentais toujours un certain vide. Je ne dis pas qu’il est comblé car il ne le sera jamais mais je sais au moins où je vais.
+
+**En réalité, cette vidéo ne présente pas à la lettre le parcours que j’ai suivi mais vous propose un parcours au regard de ce que j’ai vécu**. Et les ressources que j’ai utilisé pour surmonter chaque étape de ce parcours. Ce ne sont pas des recommandations d’achat : tout ce que je présente ici, je l’ai consommé.
+
+Le parcours proposé est difficile mais très payant si vous avez de grosses ambitions. Ne soyez pas trop exigeant avec vous mais simplement discipliné dans vos études au quotidien. Ce n'est pas un domaine facile contrairement à ce qui est écrit et publié ici et là.
+
+Eviter de commencer spécifiquement par les ressources AWS, que ce soit la plateforme gratuite d'e-learning AWS SkillBuilder, les workshops AWS, la documentation AWS et autres. Vous pouvez juste ouvrir un compte et parcourir la console. L'offre gratuite d'AWS est assez généreuse pour quelques expérimentations en fin de parcours, seulement en fin de parcours.
+
+L'exception ici peut être le cours d'[Adrian Cantrill](https://learn.cantrill.io/p/aws-certified-solutions-architect-associate-saa-c03) qui fait un énorme effort pédagogique avec beaucoup de visualisations. Mais je conseille ce cours à la fin du parcours que je vais proposer. Il faut aussi noter le cours de [Stephane Maarek](https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c03/) ou encore la [préparation aux examnes de Jon Bonso](https://portal.tutorialsdojo.com/courses/aws-certified-solutions-architect-associate-practice-exams/). [CloudAcademy](https://cloudacademy.com/), bien que ces cours soient très arides, propose de bons Labs où vous avez accès gratuitement à la console AWS en réel.
+
+Ce parcours sera réparti sur plusieurs mois. Prenez votre temps et ne cédez pas aux sirènes des publications qui peuvent vous amener à dérailler, du genre "*Comment j'ai obtenu ma certification en une semaine*".
+
+Il faut aussi savoir que les ressources que je propose ne sont pas exclusives. Il y a sûrement d'autres peut être plus meilleures. Mais comme je l'ai dit plus haut, je me suis appuyé uniquement sur mon expérience. Si vous avez d'autres ressources, proposez en commentaires et tout le monde pourra bénéficier de ce partage.
+
+## 0. Pré-requis
+
+L’exaspération que ressent nombre de développeurs avec AWS vient du fait que nombre d'entre eux n'ont pas une réelle vision des problèmes que AWS résoud. Je parle du développeur lambda, plus frontend. Parfois, pour mieux apprécier quelque chose, il faut comprendre ce qui se cache derrière l'abstraction.
+
+Allez **LIRE et RELIRE** l'article "[The Law of Leaky Abstractions](https://www.joelonsoftware.com/2002/11/11/the-law-of-leaky-abstractions/)" de Joel Spolsky... C'est un article très important, très important. 
+
+Le meilleur exemple que je vais proposer ici vient d'[un extrait de l'ebook "Introduction to Javascript Programming"](https://launchschool.com/books/javascript/read/introduction#abstraction) publié par LaunchSchool que j'ai traduit en français :
+
+> Pensez au téléphone portable que vous utilisez au quotidien pour communiquer avec vos amis et vos proches. Vous souhaitez passer et recevoir des appels, utiliser la messagerie, consulter vos comptes Facebook/Twitter et peut-être prendre des photos. En tant qu'utilisateur, vous utilisez l'interface utilisateur du fabricant pour accéder aux fonctionnalités de base du téléphone, mais vous ne savez probablement pas ou ne vous souciez pas de savoir comment réparer votre téléphone ou écrire un logiciel pour celui-ci.
+
+Un technicien réparateur de téléphones, en revanche, a besoin d'un type d'interface différent à un niveau d'abstraction inférieur. Il a besoin de savoir comment les composants fonctionnent ensemble pour pouvoir réparer les téléphones qui ne fonctionnent pas. Les ingénieurs logiciels doivent comprendre comment les sous-systèmes logiciels interagissent et doivent également se préoccuper du système d'exploitation et des outils de développement logiciel. Cela aussi se situe à un autre niveau d'abstraction inférieur.
+
+Une analyse similaire s'applique aux ordinateurs. L'utilisateur utilise des ordinateurs pour écouter de la musique, envoyer des e-mails, jouer à des jeux, etc. Il interagit avec les applications qui rendent ces tâches possibles sans aucune connaissance des détails de bas niveau.
+> 
+
+Le parcours que je propose vise justement à aider à comprendre tout ce qui se cache derrière les abstractions que propose AWS avec des appellations qui intimident certains développeurs... 
+
+Je vous propose donc ce parcours.
+
+## MOIS 1 : Bases du développement web
+
+Pour un départ, il faut avoir quelques bases sur le développement web, savoir comment une application fonctionne. Je vous conseille le parcours ["Front-end web Developer" de MDN](https://developer.mozilla.org/en-US/docs/Learn/Front-end_web_developer) associé au "[CS50 : Introduction to Computer Science](https://www.edx.org/course/introduction-computer-science-harvardx-cs50x)". C'est gratuit. Si vous êtes plutôt vidéo, optez pour le parcours "*Beginner*" de [Frontend Masters](https://frontendmasters.com/).
+
+Pour ce premier mois, Un conseil ici : **CONCENTREZ-VOUS SUR UNE SEULE RESSOURCE A LA FOIS**. Il y a énormément d'excellentes ressources que j'aurai pu recommander comme The [Odin Project](https://www.theodinproject.com/), [FreecodeCamp](https://www.freecodecamp.org/), [FullstackOpen](https://fullstackopen.com/en/), [Epic React](https://epicreact.dev/) de Kent C. Dodds... Que ce soit à Youtube ou Udemy, il y a de très bons cours. Mais il y a un risque : s'éterniser dans la spirale de tutoriels et cours. **Allez y avec une ou deux ressources et passer au niveau suivant.**
+
+## MOIS 2 : Comprendre comment Internet fonctionne
+
+Ici, je vous conseille de loin la playlist "[Networking Fundamentals](https://www.youtube.com/watch?v=bj-Yfakjllc&list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi)" de [Practical Networking](https://www.practicalnetworking.net/index/networking-fundamentals-how-data-moves-through-the-internet/).
+
+Si vous êtes curieux et plus entreprenant, suivez le cours "[iLabX – The Internet Masterclass](https://www.edx.org/course/ilabx-the-internet-masterclass)" disponible à EDX.
+
+Vous pouvez aussi jeter un coup d'oeil au cours "[Fundamentals of Networking for Effective Backend Design](https://www.udemy.com/course/fundamentals-of-networking-for-effective-backend-design/)" de Hussein Nasser, très bon pédagogue.
+
+## MOIS 3 : Comprendre les systèmes distribués
+
+Ici, je vous conseille en premier "[Foundations of Scalable Systems](https://www.oreilly.com/library/view/foundations-of-scalable/9781098106058/)" de Ian Gorton. Pour moi, c'est de loin la meilleure ressource pour un développeur lambda, l'écriture est bien soignée, les illustrations aident à la compréhension. Commencez par ce livre pour vous donner une chance.
+
+Après ce livre, orientez-vous vers un autre livre très bien organisé, très pédagogique et facile à lire : [Understanding Distributed Systems](https://understandingdistributed.systems/) de Roberto Vitillo. Je pourrai m'arrêter ici pour le cas des systèmes distribués mais ce ne serai pas rendre justice si je ne fais pas mention d'une autre livre fort intéressant...
+
+Lire OBLIGATOIREMENT "[Designing Data-Intensive Applications](https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/)" de Martin Kleppmann. J'aurai pu commencer par cette ressource mais elle n'est pas, de mon point de vue, facilement accessible...surtout la 2ème partie mais il n y a rien à redire sur la qualité du contenu de ce livre qui continue à être très recommandé, près de 5 ans après sa publication...fait très rare dans ce domaine.
+
+Si vous êtes plutôt vidéo, [Martin Kleppmann a fait une série vidéo sur Youtube](https://www.youtube.com/playlist?list=PLeKd45zvjcDFUEv_ohr_HdUFe97RItdiB) qui reprend une bonne partie de son livre. Mais ce serait injuste de ma part si je ne mentionnais pas le cours "[CSE138 (Distributed Systems)](https://www.youtube.com/watch?v=rZPRjLMWOao&list=PLNPUF5QyWU8PydLG2cIJrCvnn5I_exhYx)" de Lindsey Kuper qui réalise la fresque magistrale de rendre approchable un domaine aussi complexe.
+
+## MOIS 4 : Comprendre la virtualisation
+
+C'est très difficile de cerner le service de base d'AWS, EC2, si vous ne comprenez pas la virtualisation. **Lorsque vous achetez un ordinateur, vous payez juste l'abstraction matérielle** d'un processeur (CPU), d'une mémoire RAM, de disque de stockage et capacités réseau qu'on a regroupé, adossé sur un système d'exploitation.
+
+**AWS propose plutôt une abstraction logicielle** où vous pouvez disposer à la carte d'un processus, d'une RAM, d'une capacité stockage, réseau et système d'exploitation. Pour comprendre comment on en arrive à cette abstraction logicielle, prenez le cours très accessible en deux parties [Nand2Tetris Part I](https://www.coursera.org/learn/build-a-computer) et [Nand2Tetris Part II](https://www.coursera.org/learn/nand2tetris2) de Noam Nisan et Simon Schocken.
+
+A la suite cela, aborder une introduction à Linux très présent dans les environnements cloud... avec "[Introduction to Linux](https://www.edx.org/course/introduction-to-linux)" proposé par la fondation Linux. [KodeKloud](https://kodekloud.com/courses/the-linux-basics-course/) a aussi un cours pareil que vous pouvez suivre en ligne.
+
+Vous pouvez clôturer cette partie par la lecture du livre de Michael Hausenblas "[Learning Modern Linux](https://www.oreilly.com/library/view/learning-modern-linux/9781098108939/)". Comme je l'ai précisé plus haut, ne soyez pas trop exigeant avec vous même. Vous allez revisiter toutes ces ressources lorsque vous allez vous préparer effectivement pour la certification.
+
+## MOIS 5 : Conteneurs et Microservices
+
+Ici, commencez par le [tutoriel Docker](https://www.youtube.com/watch?v=pg19Z8LL06w) de Techworld with Nana. C'est de loin la meilleure pédagogiquement parlant. Elton Stoneman n'est pas loin avec ses livres sur [Docker](https://www.manning.com/books/learn-docker-in-a-month-of-lunches) et [Kubernetes](https://www.manning.com/books/learn-kubernetes-in-a-month-of-lunches) publiés chez l'excellent éditeur Manning même comme cela date un peu dans un domaine très évolutif.
+
+S'il y a une seule ressource pratique que je peux fortement recommander de s'attarder là dessus, c'est celui d'Ashley Davis, "[Bootstrapping Microservices with Docker, Kubernetes, and Terraform](https://www.manning.com/books/bootstrapping-microservices-with-docker-kubernetes-and-terraform)". C'est un livre très pratique.
+
+Je ne peux clôturer cette partie sans mentionner [Wilco](https://www.trywilco.com/) qui vous permet de pratiquer sans installer tout ce qui va avec. Si votre ordinateur personnel est sous Windows ou si vous ne savez pas comment lancer un environnement de développement avec AWS, optez pour Wilco. C'est suffisant pour l'apprentissage de ce mois 5.
+
+## MOIS 6 et Suivants : AWS
+
+Commencez vos études par comprendre la sécurité avec AWS. L'architecture des solutions sur AWS s'appuient sur six (6) piliers : l'excellence opérationnelle, la fiabilité, la sécurité, l'efficacité des performances, l'optimisation des coûts et le développement durable. Vous n'aurez aucun mal avec les autres piliers à l'exception de la sécurité si vous avez bien fait vos classes les 5 premiers mois. C'est le pilier "tendon d'achille".
+
+Commencez par le très excellent livre "[Designing Secure Systems](https://www.routledge.com/Designing-Secure-Systems/Melone/p/book/9780367700010)" de Michael Melone. Prenez le temps de bien assimiler la première partie. Ce livre va vous donner de solides bases théoriques pour aborder la sécurité. A lire absolumment.
+
+Après de solides bases théoriques offertes par le livre de Michael Melone, il faut parcourir comment cela est déployé à AWS. A la suite, parcourez le livre de Dylan Shields "[AWS Security](https://www.manning.com/books/aws-security)" publié à Manning. Aucun commentaire là dessus. Manning est un éditeur très sérieux.
+
+Le concept de VPC(virtual private cloud) est central à AWS... chaque compte AWS est associé à un VPC par défaut. Donc c'est un concept à comprendre. Prenez le cours "[AWS VPC and Networking in depth](https://www.udemy.com/course/networking-in-aws/?referralCode=6F9B5997DA10F80BE734)" de Chetan Agrawal. Une version simplifiée, [AWS VPC Basics](https://www.youtube.com/watch?v=O3fgul-fJCk), est disponible à Youtube.
+
+Pour le reste, vous pouvez vous consacrer maintenant au cours "[AWS Certified Solutions Architect - Associate (SAA-C03)](https://learn.cantrill.io/p/aws-certified-solutions-architect-associate-saa-c03)" d'Adrian Cantrill. Très excellent cours. C'est ma première recommandation. Il y a d'autres cours tout aussi excellents comme celui de Stephane Maarek à [Udemy](https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c03/), [A Cloud Guru](https://acloudguru.com/), [CloudAcademy](https://cloudacademy.com/learning-paths/aws-solutions-architect-associate-saa-c03-certification-preparation-for-aws-1-7446/). C'est au choix. **Optez pour une seule ressource**.
+
+Vous pouvez survoler sans vous attarder sur la série "[Cloud Fundamentals](https://www.youtube.com/watch?v=20QUNgFIrK0&list=PLOspHqNVtKAC-_ZAGresP-i0okHe5FjcJ)" d'IBM et même la chaîne très pédagogique d'Alex [ByteByteGo](https://www.youtube.com/@ByteByteGo).
+
+Il y a d’autres ressources que vous pouvez survoler ou explorer : 
+
+- AWS propose d'excellentes ressources, en plus de la documentation qui est la meilleure source d'information : la plateforme d'e-learning [AWS Skill Builder](https://explore.skillbuilder.aws/), les [Workshops AWS](https://workshops.aws/), les [guides de démarrage AWS](https://aws.amazon.com/fr/training/ramp-up-guides/) et de [nombreuses conférences](https://aws.amazon.com/fr/events/?nc2=h_ql_ev) publiées à Youtube ou Twitch.
+- Profitez de l'offre gratuite très généreuse d'AWS pour pratiquer. AWS a des implémentations de références de [solutions d'architecture](https://aws.amazon.com/fr/architecture/reference-architecture-diagrams/) comme le "[Serverless Reference Architecture: Web Application](https://github.com/aws-samples/lambda-refarch-webapp)" que vous pouvez étudier et si possible reproduire.
+
+Voilà pour le retour d'expérience. Si vous suivez ce parcours, vous serez plus confiant lors de votre date d’examen et même pour la suite, pendant la recherche de votre emploi. Si vous êtes plus exigeant, publier quotidiennement un journal d’études dans un blog. 
+
+Partager pour aider aider d'autres personnes. S'il y a une opportunité où je pourrai apporter ma modeste contribution, n'hésitez pas à me laisser un message privé.
+
+Dans la prochaine et dernière note de cette semaine, on va aborder les pré-réquis car c’est important de s’attarder là dessus pour que vous compreniez l’intérêt de ma démarche.
+
+## Liens cités dans cette note
+
+<aside>
+💡 **CONCENTREZ-VOUS SUR UNE ET UNE SEULE RESSOURCE A LA FOIS**
+
+</aside>
+
+- La page de certification [AWS Solutions Architect - Associate (SAA-C03)](https://aws.amazon.com/fr/certification/certified-solutions-architect-associate/), le [parcours d’apprentissage proposé par AWS](https://explore.skillbuilder.aws/learn/course/external/view/elearning/125/exam-readiness-aws-certified-solutions-architect-associate-digital?saa=sec&sec=prep), le  [guide de l’examen](https://d1.awsstatic.com/fr_FR/training-and-certification/docs-sa-assoc/AWS-Certified-Solutions-Architect-Associate_Exam-Guide.pdf) et le [ramp-up guide](https://d1.awsstatic.com/training-and-certification/ramp-up_guides/Ramp-Up_Guide_Architect.pdf).
+- **LIRE et RELIRE** l'article "[The Law of Leaky Abstractions](https://www.joelonsoftware.com/2002/11/11/the-law-of-leaky-abstractions/)" de Joel Spolsky
+- **MOIS 1 : Bases du développement web**
+    - Le parcours ["Front-end web Developer" de MDN](https://developer.mozilla.org/en-US/docs/Learn/Front-end_web_developer) associé au "[CS50 : Introduction to Computer Science](https://www.edx.org/course/introduction-computer-science-harvardx-cs50x)". C'est gratuit. Si vous êtes plutôt vidéo, optez pour le parcours "*Beginner*" de [Frontend Masters](https://frontendmasters.com/).
+    - Alternatives :  [Odin Project](https://www.theodinproject.com/), [FreecodeCamp](https://www.freecodecamp.org/), [FullstackOpen](https://fullstackopen.com/en/), [Epic React](https://epicreact.dev/) de Kent C. Dodds...
+- **MOIS 2 : Comprendre comment Internet fonctionne**
+    - "[Networking Fundamentals](https://www.youtube.com/watch?v=bj-Yfakjllc&list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi)" de [Practical Networking](https://www.practicalnetworking.net/index/networking-fundamentals-how-data-moves-through-the-internet/) et le cours "[Fundamentals of Networking for Effective Backend Design](https://www.udemy.com/course/fundamentals-of-networking-for-effective-backend-design/)" de Hussein Nasser
+    - Approfondissement : "[iLabX – The Internet Masterclass](https://www.edx.org/course/ilabx-the-internet-masterclass)" disponible à EDX
+- **MOIS 3 : Comprendre les systèmes distribués**
+    - "[Foundations of Scalable Systems](https://www.oreilly.com/library/view/foundations-of-scalable/9781098106058/)" de Ian Gorton, [Understanding Distributed Systems](https://understandingdistributed.systems/) de Roberto Vitillo et "[Designing Data-Intensive Applications](https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/)"
+    - Autres ressources : [Martin Kleppmann a fait une série vidéo sur Youtube](https://www.youtube.com/playlist?list=PLeKd45zvjcDFUEv_ohr_HdUFe97RItdiB) et le cours "[CSE138 (Distributed Systems)](https://www.youtube.com/watch?v=rZPRjLMWOao&list=PLNPUF5QyWU8PydLG2cIJrCvnn5I_exhYx)" de Lindsey Kuper
+- **MOIS 4 : Comprendre la virtualisation**
+    - Le cours très accessible en deux parties [Nand2Tetris Part I](https://www.coursera.org/learn/build-a-computer) et [Nand2Tetris Part II](https://www.coursera.org/learn/nand2tetris2) de Noam Nisan et Simon Schocken.
+    - Autres ressources : "[Introduction to Linux](https://www.edx.org/course/introduction-to-linux)" proposé par la fondation Linux. [KodeKloud](https://kodekloud.com/courses/the-linux-basics-course/) a aussi un cours pareil que vous pouvez suivre en ligne. Lire si possible le livre de Michael Hausenblas "[Learning Modern Linux](https://www.oreilly.com/library/view/learning-modern-linux/9781098108939/)"
+- **MOIS 5 : Conteneurs et Microservices**
+    - Le [tutoriel Docker](https://www.youtube.com/watch?v=pg19Z8LL06w) de Techworld with Nana et le livre d’Ashley Davis, "[Bootstrapping Microservices with Docker, Kubernetes, and Terraform](https://www.manning.com/books/bootstrapping-microservices-with-docker-kubernetes-and-terraform)"
+    - Autres ressources : les livres sur [Docker](https://www.manning.com/books/learn-docker-in-a-month-of-lunches) et [Kubernetes](https://www.manning.com/books/learn-kubernetes-in-a-month-of-lunches) publiés chez l'excellent éditeur Manning, le site web d’apprentissage  [Wilco](https://www.trywilco.com/)
+- **MOIS 6 et Suivants : AWS**
+    - Recommandé : Le [cours d’Adrian Cantrill](https://learn.cantrill.io/p/aws-certified-solutions-architect-associate-saa-c03)
+    - IMPORTANT : Lire le livre "[Designing Secure Systems](https://www.routledge.com/Designing-Secure-Systems/Melone/p/book/9780367700010)" de Michael Melone, lire aussi  livre de Dylan Shields "[AWS Security](https://www.manning.com/books/aws-security)".
+    - Alternatives : le [parcours d’apprentissage proposé par AWS](https://explore.skillbuilder.aws/learn/course/external/view/elearning/125/exam-readiness-aws-certified-solutions-architect-associate-digital?saa=sec&sec=prep), le cours de [Stephane Maarek](https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c03/), le parcours proposé par [CloudAcademy](https://cloudacademy.com/) ou encore la [préparation aux examnes de Jon Bonso](https://portal.tutorialsdojo.com/courses/aws-certified-solutions-architect-associate-practice-exams/)
+    - Mention Honorable : Le cours "[AWS VPC and Networking in depth](https://www.udemy.com/course/networking-in-aws/?referralCode=6F9B5997DA10F80BE734)" de Chetan Agrawal. Une version simplifiée, [AWS VPC Basics](https://www.youtube.com/watch?v=O3fgul-fJCk), est disponible à Youtube. La série "[Cloud Fundamentals](https://www.youtube.com/watch?v=20QUNgFIrK0&list=PLOspHqNVtKAC-_ZAGresP-i0okHe5FjcJ)" d'IBM et même la chaîne très pédagogique d'Alex [ByteByteGo](https://www.youtube.com/@ByteByteGo).
+    - AWS propose d'excellentes ressources, en plus de la documentation qui est la meilleure source d'information : la plateforme d'e-learning [AWS Skill Builder](https://explore.skillbuilder.aws/), les [Workshops AWS](https://workshops.aws/), les [guides de démarrage AWS](https://aws.amazon.com/fr/training/ramp-up-guides/) et de [nombreuses conférences](https://aws.amazon.com/fr/events/?nc2=h_ql_ev) publiées à Youtube ou Twitch.
+    - Profitez de l'offre gratuite très généreuse d'AWS pour pratiquer. AWS a des implémentations de références de [solutions d'architecture](https://aws.amazon.com/fr/architecture/reference-architecture-diagrams/) comme le "[Serverless Reference Architecture: Web Application](https://github.com/aws-samples/lambda-refarch-webapp)" que vous pouvez étudier et si possible reproduire.
