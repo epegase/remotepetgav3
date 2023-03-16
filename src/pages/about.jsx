@@ -41,10 +41,10 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>A Props - Duverger PETGA</title>
+        <title>A Propos - Duverger PETGA</title>
         <meta
           name="description"
-          content="I’m Spencer Sharp. I live in New York City, where I design the future."
+          content="Je suis Duverger PETGA. Je vis à Douala où j'ose pour un meilleur futur "
         />
       </Head>
       <Container className="mt-16 sm:mt-32">
@@ -61,58 +61,53 @@ export default function About() {
           </div>
           <div className="lg:order-first lg:row-span-2">
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-              I’m Spencer Sharp. I live in New York City, where I design the
-              future.
+              Je suis Duverger PETGA. Je vis à Douala où j'ose pour un meilleur futur
             </h1>
             <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
               <p>
-                I’ve loved making things for as long as I can remember, and
-                wrote my first program when I was 6 years old, just two weeks
-                after my mom brought home the brand new Macintosh LC 550 that I
-                taught myself to type on.
+              Je suis Duverger PETGA, Architecte de Solutions AWS et j’ai entrepris de partager mon parcours 
+              pour permettre à d’autres personnes intéressées de sauter le pas et changer de carrière. 
+              Je suis aussi le fondateur de FaStyle, une application qui permet de sauvegarder et 
+              partager les inspirations de styles, beauté et tout ce qui tourne autour de la mode et le bien-être. 
+              Elle est en cours de développement et le MVP sera disponible d’ici quelques mois. 
+              Mes domaines d’intérêt portent principalement sur le Cloud, les systèmes distribués, 
+              l’intelligence artificielle et l’industrie du capital risque (Venture Capital).
               </p>
               <p>
-                The only thing I loved more than computers as a kid was space.
-                When I was 8, I climbed the 40-foot oak tree at the back of our
-                yard while wearing my older sister’s motorcycle helmet, counted
-                down from three, and jumped — hoping the tree was tall enough
-                that with just a bit of momentum I’d be able to get to orbit.
+              A la base, j’ai occupé la fonction de gestionnaire de stocks dans une entreprise industrielle 
+              pendant près de neuf (9) ans et j’ai entrepris, depuis Janvier 2020, un processus de changement 
+              de carrière qui m’a mené tour à tour à décrocher une certification à React avec Udacity, une sur 
+              les bases du machine learning avec AWS et une autre sur GraphQL avec Apollo GraphQL. 
               </p>
               <p>
-                I spent the next few summers indoors working on a rocket design,
-                while I recovered from the multiple surgeries it took to fix my
-                badly broken legs. It took nine iterations, but when I was 15 I
-                sent my dad’s Blackberry into orbit and was able to transmit a
-                photo back down to our family computer from space.
-              </p>
-              <p>
-                Today, I’m the founder of Planetaria, where we’re working on
-                civilian space suits and manned shuttle kits you can assemble at
-                home so that the next generation of kids really <em>can</em>{' '}
-                make it to orbit — from the comfort of their own backyards.
+              J’ai été sélectionné comme AWS Community Builder début 2022 et j’ai entrepris d’aider 
+              d’autres personnes soucieuses de changer de carrière à le faire. Je pense être mieux placé, 
+              à travers mon parcours et mes résultats, pour comprendre ceux qui hésitent à sauter le pas et 
+              qui trouvent que c'est difficile, voire impossible d'y arriver sans diplômes, background ou 
+              connaissances en IT. Mon message est simple : “C’est Possible”.
               </p>
             </div>
           </div>
           <div className="lg:pl-20">
             <ul role="list">
-              <SocialLink href="#" icon={TwitterIcon}>
-                Follow on Twitter
+              <SocialLink href="https://twitter.com/epegase"  icon={TwitterIcon}>
+                Me suivre sur Twitter
               </SocialLink>
-              <SocialLink href="#" icon={InstagramIcon} className="mt-4">
-                Follow on Instagram
+              <SocialLink href="https://instagram.com/epegase"  icon={InstagramIcon} className="mt-4">
+                Me suivre sur Instagram
               </SocialLink>
-              <SocialLink href="#" icon={GitHubIcon} className="mt-4">
-                Follow on GitHub
+              <SocialLink href="https://github.com/epegase" icon={GitHubIcon} className="mt-4">
+                Me suivre sur GitHub
               </SocialLink>
-              <SocialLink href="#" icon={LinkedInIcon} className="mt-4">
-                Follow on LinkedIn
+              <SocialLink href="https://linkedin.com/duverger-petga-0a273096/" icon={LinkedInIcon} className="mt-4">
+                Me suivre sur LinkedIn
               </SocialLink>
               <SocialLink
-                href="mailto:spencer@planetaria.tech"
+                href="mailto:duvergerpetga@gmail.com"
                 icon={MailIcon}
                 className="mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40"
               >
-                spencer@planetaria.tech
+                duvergerpetga@gmail.com
               </SocialLink>
             </ul>
           </div>
