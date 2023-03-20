@@ -1,0 +1,82 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import Image from 'next/future/image'
+import abstractionWebDev from './abstraction-web-dev.png'
+import templateCasPratique from './template-cas-pratique.png'
+import annonceArchitecteCloud from './architecte-cloud-demo.png'
+
+export const meta = {
+  author: 'Duverger PETGA',
+  date: '2023-03-20',
+  title: 'Prépa Certification Architecte de solutions AWS | Ep.6 : C’est Quoi le Développement Web ?',
+  description:
+    'L\'\ Architecte Cloud utilise le plus souvent les démos pour présenter des solutions techniques aux problèmes des clients. Savoir comment développer un site web est un pré-requis pour notre formation. Néanmoins, ce cours n\'\ est pas un cours complet sur le développement web. Mon approche est de vous donner les bases, quitte à vous d\'\ approfondir par la suite avec d’autres cours ou ressources qui peuvent aller avec votre façon d\'\ apprendre. Nous allons partir d\'\ un cas pratique, reproduire un site web existant pour balayer quelques éléments théoriques.',
+}
+
+export default (props) => <ArticleLayout meta={meta} {...props} />
+
+
+Bonjour et Bienvenue au Club des Architectes Cloud AWS… La chaîne Youtube dont l’ambition est de rassembler les architectes cloud AWS d’expression francophone sous une même bannière. 
+
+Dans [la note de l’épisode 2](https://www.remotepetga.dev/articles/prepa-certification-saa-c03-ep2-architecte-cloud) qui était titré “*C'est quoi un Architecte de solutions AWS ?*”, j’avais fait un extrait de la réponse qu’apportait AWS sur son site web, à savoir : **le principal rôle d’un architecte cloud est d’accélérer l’adoption des services AWS**. Je reprends à travers cette capture d’écran la description du rôle qu’offre AWS : 
+
+<Image src={annonceArchitecteCloud} alt="annonce emploi aws" />
+
+Si vous observez plus bas, vous verrez bien “***Vous êtes idéalement une personne capable de rédiger des codes…***”. 
+
+Je sais que vous avez déjà lu ici et là que vous n’avez pas besoin de coder pour devenir architecte cloud mais il y a ceci que vous ne devez pas oublier : “*Tout flatteur vit aux dépens de celui qui l’écoute*”. La certification est un très gros marché et la formation est très porteuse. Vous n’avez qu’à voir le nombre de personnes inscrites aux cours de préparation pour les examens de certification sur Udemy pour vous en faire une idée. [Stephane Maarek](https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c03/) par exemple comptabilise uniquement pour sa seule formation pour les architectes près de 750 000 apprenants. Et même ses concurrents ont des chiffres envieux. La stratégie pour avoir le plus grand nombre est de baisser sans cesse les pré-réquis. Alors qu’en réalité, vous aurez besoin de bien plus pour réussir.
+
+Parmi les pré-requis que j’estime indispensable si vous voulez aller loin, il y a : 
+
+- le développement web,
+- comprendre comment internet fonctionne,
+- comprendre les systèmes distribués,
+- avoir une idée ou une vue d’ensemble de la sécurité dans le cadre des systèmes d’information.
+
+Ce sont ces points que je vais aborder lors des prochains jours et mois. Et dès aujourd’hui, je vais commencer par le développement web. **Mais avant de commencer, je dois apporter une précision importante.**
+
+## 1- Précision : Ce n’est pas un cours complet sur le développement web
+
+**Le cours de développement web que je propose n’est pas exhaustif et même si je le voulais, je ne pourrai pas être exhaustif.** Il y a énormément de ressources à la fois payantes et gratuites de très bonne qualité disponible sur Internet. Même en faisant une simple recherche à Google ou Youtube, vous allez tomber sur des ressources très intéressantes. Mon approche est de vous donner les bases, quitte à vous d’approfondir par la suite avec d’autres cours ou ressources qui peuvent aller avec votre façon d’apprendre. Je ne manquerai pas de vous faire quelques recommandations mais faites vous même vos recherches, vous pouvez trouver plus meilleures ressources. Je dois ajouter que je me suis largement appuyé sur le curriculum du bootcamp gratuit “[The Odin Project](https://www.theodinproject.com/)”.
+
+Pour ma part, afin éviter d’être trop abstrait bien que j’aime l’abstraction, je vais partir d’un cas pratique pour présenter le développement web. A l’heure où j’écris ces lignes, rien n’a été préparé d’avance. Donc forcément, il y aura des erreurs, beaucoup d’erreurs. Mais vous ne devez pas voir ces erreurs comme un manque de professionnalisme, de connaissances ou d’expérience. Corriger les erreurs, c’est le quotidien des développeurs. Et si vous vous retrouvez face à une erreur en voulant reproduire ce que je fais, ne paniquez pas, ne vous découragez pas :  faites juste une recherche à Google et dans la majeure partie des cas, vous allez trouver une réponse à votre problème.
+
+## 2- Le cas pratique
+
+Quel exemple je vais prendre ? Supposons que lors de votre navigation journalière et habituelle, vous tombiez sur un site qui vous intéresse, site disponible à l’adresse [https://spotlight.tailwindui.com](https://spotlight.tailwindui.com/)
+
+<Image src={templateCasPratique} alt="template pour cas pratique" />
+
+Vous êtes intéressé et vous voulez aussi avoir un site web pareil. Bien que le site soit un [template en vente](https://tailwindui.com/templates/spotlight), vous vous fixez le défi de mettre en place pareil site avec vos connaissances. Vous n’avez aucune connaissance en développement web et vous ne savez pas par où commencer. Nous allons donc partir de cet exemple et reproduire un site web similaire.
+
+## 3- Le développement web est une affaire d’abstraction…
+
+Dans [la note de l’épisode 4](https://www.remotepetga.dev/articles/prepa-certification-saa-c03-ep4-experience), j’avais aussi demandé d’aller **LIRE** l'article "[The Law of Leaky Abstractions](https://www.joelonsoftware.com/2002/11/11/the-law-of-leaky-abstractions/)" de Joel Spolsky...  Et pour mieux illustrer l’importance de cet article, j’avais proposé [un extrait de l'ebook "Introduction to Javascript Programming"](https://launchschool.com/books/javascript/read/introduction#abstraction) publié par LaunchSchool que j'ai traduit en français :
+
+> *Pensez au téléphone portable que vous utilisez au quotidien pour communiquer avec vos amis et vos proches. Vous souhaitez passer et recevoir des appels, utiliser la messagerie, consulter vos comptes Facebook/Twitter et peut-être prendre des photos. En tant qu'utilisateur, vous utilisez l'interface utilisateur du fabricant pour accéder aux fonctionnalités de base du téléphone, mais vous ne savez probablement pas ou ne vous souciez pas de savoir comment réparer votre téléphone ou écrire un logiciel pour celui-ci.
+
+Un technicien réparateur de téléphones, en revanche, a besoin d'un type d'interface différent à un niveau d'abstraction inférieur. Il a besoin de savoir comment les composants fonctionnent ensemble pour pouvoir réparer les téléphones qui ne fonctionnent pas. Les ingénieurs logiciels doivent comprendre comment les sous-systèmes logiciels interagissent et doivent également se préoccuper du système d'exploitation et des outils de développement logiciel. Cela aussi se situe à un autre niveau d'abstraction inférieur.
+
+Une analyse similaire s'applique aux ordinateurs. L'utilisateur utilise des ordinateurs pour écouter de la musique, envoyer des e-mails, jouer à des jeux, etc. Il interagit avec les applications qui rendent ces tâches possibles sans aucune connaissance des détails de bas niveau.*
+> 
+
+Lorsque vous conduisez votre véhicule, vous avez vos interfaces : clé de démarrage, volant, tableau de bord, pédales, levier de vitesse et autres. Lorsque le véhicule est en panne, vous sollicitez un mécanicien qui a passé de nombreuses années d’étude et d’expérience pour comprendre ce qui se cache derrière ces interfaces.
+
+C’est la même chose avec le web. Vous surfez tous les jours, vous faites vos achats en ligne sur les sites d’e-commerce, vous échangez sur les réseaux sociaux, vous êtes à Youtube pour visionner, vous lisez votre journal en ligne, vous consultez la page de votre artiste préféré pour voir les prochaines dates de concert,…etc. 
+
+Lorsque vous devez développeur web, vous passez de l’autre côté comme le mécanicien est de l’autre côté. 
+
+<Image src={abstractionWebDev} alt="tache developpeur web" />
+
+Source de l’image : Site Web [Interneting is Hard](https://www.internetingishard.com/html-and-css/introduction/)
+
+En règle générale, les développeurs web construisent des sites web. A l’exemple d’une amie mannequin qui peut vous demander de développer son site web. Votre frère qui est consultant peut vous demander de développer son site web… Et à la fin de votre travail, il faudrait que lorsqu’un utilisateur, un fan de votre amie mannequin ou un potentiel client pour l’activité de consulting de votre frère tape *www.mannequin.fr* ou *www.consultant.com*, il tombe sur ce que vous avez conçu. 
+
+Donc, en tant que développeur web, vous devez avoir une idée sur ce qui se passe lorsque vous tapez www. C’est ce que nous allons voir dans la prochaine vidéo.
+
+## 4- Liens cités dans cette note
+
+- Episode 2 : “*[C'est quoi un Architecte de solutions AWS ?](https://www.remotepetga.dev/articles/prepa-certification-saa-c03-ep2-architecte-cloud)*****”**** publié sur mon site web personnel [remotepetga.dev](https://www.remotepetga.dev/)
+- Episode 4 : ****“*****[Comment j'ai obtenu ma certification SAA-C03 en 6 mois ?](https://www.remotepetga.dev/articles/prepa-certification-saa-c03-ep4-experience)*****”**** publié sur mon site web personnel [remotepetga.dev](https://www.remotepetga.dev/)
+- Le lien vers le template qui nous servira d’inspiration pour la pratique : [https://spotlight.tailwindui.com/](https://spotlight.tailwindui.com/)
+- L'article "[The Law of Leaky Abstractions](https://www.joelonsoftware.com/2002/11/11/the-law-of-leaky-abstractions/)" de Joel Spolsky... et [l’extrait de l'ebook "Introduction to Javascript Programming"](https://launchschool.com/books/javascript/read/introduction#abstraction) qui illustre mieux le concept d’abstraction.
+- Pour une introduction simple et très illustré du développement web : [https://www.internetingishard.com/html-and-css/introduction/](https://www.internetingishard.com/html-and-css/introduction/)
