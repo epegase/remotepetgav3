@@ -1,0 +1,50 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import Image from 'next/future/image'
+import howWebWorks from './howWebWorks.png'
+
+export const meta = {
+  author: 'Duverger PETGA',
+  date: '2023-03-21',
+  title: 'Prépa Certification Architecte de solutions AWS | Ep.7 : Que se passe t-il lorsque vous tapez www. ?',
+  description:
+    'Cette note présente de façon simple le fonctionnement du web. En tant qu’architecte cloud, vous devez avoir une idée sur ce qui se passe lorsqu’on tape www. Que se passe-t-il lorsque vous tapez dans votre navigateur www.amazon.fr ?',
+}
+
+export default (props) => <ArticleLayout meta={meta} {...props} />
+
+
+Bonjour et Bienvenue au Club des Architectes Cloud AWS… La chaîne Youtube dont l’ambition est de rassembler les architectes cloud AWS d’expression francophone sous une même bannière. 
+
+Dans la précédente note, nous avions dit que le développement web était une affaire de niveau d’abstraction. Vous surfez tous les jours, vous faites vos achats en ligne sur les sites d’e-commerce, vous échangez sur les réseaux sociaux, vous êtes à Youtube pour visionner, vous lisez votre journal en ligne, vous consultez la page de votre artiste préféré pour voir les prochaines dates de concert,…etc.  Pour faire plus simple, vous “***consommez***” les sites web produits par d’autres. Lorsque vous avez la casquette de développeur, vous passez de l’autre côté : vous devez “***produire***” des sites web.
+
+Donc, en tant que développeur web, vous devez avoir une idée sur ce qui se passe lorsqu’on tape www. C’est ce que nous allons voir dans cette vidéo mais de **façon plus simple**. Nous sommes encore au début de notre aventure et je ne vais pas aller en profondeur. Lorsqu’on évoluera, je vais revenir sur cette vidéo avec une approche plus technique, plus approfondie.
+
+Et pour présenter cette vidéo, je vais piquer l’illustration du cours “****[100 Days Of Code](https://pro.academind.com/p/web-development-2022-the-complete-guide)”** de Maximilian Schwarzmüller. Si vous n’avez aucune difficulté avec la langue anglaise, je vous conseille ce cours pour avoir de solides bases en développement web. J’aurai pu reproduire la même image avec un outil comme [Excalidraw](https://excalidraw.com/) mais je n’aime pas jouer à l’intelligent alors que j’ai une source plus aboutie. Autant mieux utiliser et citer la source. On gagne en temps et c’est plis honnête intellectuellement parlant. C’est un point très important et j’y reviendrai.
+
+Revenons à notre image.
+
+<Image src={howWebWorks} alt="illustration fonctionnement internet" />
+
+Pour faire simple, lorsque vous tapez dans votre navigateur *www.amazon.fr,* les étapes suivantes se déroulent en arrière-plan : 
+
+1. Le navigateur, Google Chrome par exemple, envoie votre requête, votre demande par votre connexion Internet. C’est un peu comme lorsque vous voulez téléphonez à un ami, vous tapez son numéro et vous lancez l’appel et il décroche. Votre requête doit arriver sur les machines d’Amazon. Les machines d’Amazon doivent recevoir votre requête. Ce sont ces machines qu’on appellent serveurs, les serveurs d’Amazon car un serveur est là pour servir, servir les réponses aux demandes, aux requêtes des navigateurs qu’on appellent dans le jargon “clients”. Ce jargon a été inspiré par ce qui se passe dans les restaurants avec le client qui émet sa demande, passe commande et le serveur qui sert, répond à la demande.
+2. Seulement, lorsque vous téléphonez à votre ami, vous avez son numéro dans votre annuaire, un numéro attribué par l’opérateur téléphonique. Il est unique et personne d’autre ne peut décrocher ce numéro à part lui. Donc, au niveau de l’opérateur téléphonique, il y a un annuaire général où figure, pour chaque personne, un ou des numéros de téléphones. C’est la même chose avec Internet. Lorsque vous tapez *www.amazon.fr,* le navigateur a recours à ce qu’on appelle le DNS (**D**omain **N**ame **S**ystem) qui est une sorte d'annuaire pour sites web. Lorsque vous saisissez une adresse dans le navigateur, ce dernier consulte le DNS pour trouver l'adresse réelle du site web avant de la récupérer. C’est pour cela que le DNS est traduit par serveur de noms de domaines. Le nom de domaine correspond à ce que vous tapez dans le navigateur, *www.amazon.fr.* Le DNS est un serveur, une machine qui a la liste des adresses web, un peu comme l’annuaire téléphonique. Le navigateur a besoin de savoir sur quel serveur, quel machine le site web est situé pour pouvoir envoyer des requêtes au bon endroit.
+3. Si le serveur accepte la requête émise par le client, le serveur envoie un message au client qui signifie : « *Pas de problème, tu peux consulter ce site web, le voici* ». Ensuite le serveur commence à envoyer les fichiers du site web au navigateur sous forme d'une série de petits morceaux nommés "paquet”. Ces petits paquets arrivent par votre connexion Internet. C’est pour cela que lorsque votre connexion internet est lente, vous voyez le site web apparaître progressivement. 
+4. Le navigateur assemble les différents morceaux pour recomposer le site web en entier puis l'affiche sur votre écran.
+
+Je l’ai dit en début de vidéo, nous sommes encore au début de notre aventure et les choses sont plus compliquées que ce que j’ai présenté et nous allons y revenir. 
+
+Ce que vous devez retenir de cette partie est simplement que votre navigateur appelé “client” dans le jargon du développement web émet une requête. Cette requête passe par un annuaire appelé DNS ou serveur de nom de domaine pour retrouver l’adresse exacte des machines ou “serveurs” d’Amazon et cela permet au navigateur de déposer la requête à ces serveurs. Les serveurs reçoivent la requête et envoient une réponse au navigateur et le navigateur affiche le site web.
+
+**Les concepts que vous devez retenir pour toute la suite de cette série de formation pour devenir architecte cloud sont : client, serveur, requête, réponse, DNS**. 
+
+Ce sont des concepts qui vont revenir au fur et à mesure que nous allons avancer. Et nous allons ajouter d’autres concepts lorsqu’on va approfondir cette partie.
+
+Pour la prochaine vidéo, nous allons présenter l’environnement du web. De façon claire, comme le dit si bien “[The Odin Project](https://www.theodinproject.com/lessons/foundations-computer-basics)” dont je m’inspire du curriculum, “*Inutile de dire que tout en apprenant à coder, vous passerez la plupart de votre temps sur un ordinateur. Par conséquent, comprendre comment travailler avec votre ordinateur est crucial.*” Je vais donc balayer rapidement quelques notions de base en informatique. Comme je l’ai dit lorsque je lançais cette chaîne, la cible principale de cette formation d’architecte cloud est ceux qui souhaitent changer de carrière et qui n’ont pas de solides bases en informatique.
+
+## Liens cités ou à consulter
+
+- [*What happens when you type a URL into your browser?*](https://blog.bytebytego.com/p/what-happens-when-you-type-a-url)**, [ByteByteGo Newsletter](https://blog.bytebytego.com/).** La version vidéo est disponible à Youtube : [https://www.youtube.com/watch?v=AlkDbnbv7dk](https://www.youtube.com/watch?v=AlkDbnbv7dk)
+- “*[Le fonctionnement du Web](https://developer.mozilla.org/fr/docs/Learn/Getting_started_with_the_web/How_the_Web_works)*”, MDN (Mozilla Development Network)
+- “*[100 Days Of Code: The Complete Web Development Bootcamp](https://pro.academind.com/p/web-development-2022-the-complete-guide)*****”, [Academind](https://pro.academind.com/)**
+- Le meilleur bootcamp pour passer de zéro à développeur web, [The Odin Project](https://www.theodinproject.com/)
