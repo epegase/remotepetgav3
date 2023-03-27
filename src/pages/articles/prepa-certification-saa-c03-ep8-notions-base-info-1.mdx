@@ -1,0 +1,111 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+
+export const meta = {
+  author: 'Duverger PETGA',
+  date: '2023-03-22',
+  title: 'Prépa Certification Architecte de solutions AWS | Ep.8 : Quelques notions de base en informatique (1/3)',
+  description:
+    'Cette note présente le concept d\'\ordinateur qui ne se limite pas seulement à l\'\ordinateur de bureau. On y retrouve les ordinateurs portables, les tablettes, les serveurs et même les smartphones et les wearables. Ces différents types d\'\ordinateurs ont en commun deux choses : le matériel et le logiciel. Les ordinateurs personnels se présentent sous deux styles principaux : PC et Mac.',
+}
+
+export default (props) => <ArticleLayout meta={meta} {...props} />
+
+Bonjour et Bienvenue au Club des Architectes Cloud AWS… La chaîne Youtube dont l’ambition est de rassembler les architectes cloud AWS d’expression francophone sous une même bannière. 
+
+Dans la précédente note, nous avons présenté les concepts comme **client, serveur, requête, réponse, DNS** dans le cadre de la présentation simplifiée de ce qui se passait lorsque vous tapiez l’adresse d’un site web dans votre navigateur.
+
+Ce que vous devez retenir est simplement que votre navigateur appelé “client” dans le jargon du développement web émet une requête. Cette requête passe par un annuaire appelé DNS ou serveur de nom de domaine pour retrouver l’adresse exacte des machines ou “serveurs” d’Amazon et cela permet au navigateur de déposer la requête à ces serveurs. Les serveurs reçoivent la requête et envoient une réponse au navigateur et le navigateur affiche le site web. Nous allons revenir plus tard sur ce point de façon plus complète.
+
+Aujourd’hui, nous allons aborder rapidement quelques notions de base en informatique. Je précise “*rapidement*” parce que le format court de la vidéo ne nous permet pas d’aller en profondeur. Pourquoi aborder les notions de base en informatique ? Tout simplement parce que la cible principale de ce cours est toute personne désirant changer de carrière et n’ayant pas un solide background en informatique. Et en plus, le développement web commence par votre machine. C’est sur cette machine que vous allez installer les outils de développement, effectuer des téléchargements, des tests et autres. 
+
+Bien que vous soyez immergé dans l’environnement informatique de part votre travail, vos loisirs, l’organisation de votre journée, il est important de clarifier certains concepts pour éviter toute ambiguité dans le sens dans la suite de notre cours. L’informatique fait partie de notre quotidien mais nous devons dépasser le sens commun et aborder professionnellement ce domaine.
+
+Pour ceux qui veulent une présentation concise et précise, consultez la vidéo “****[Computer & Technology Basics Course for Absolute Beginners](https://www.youtube.com/watch?v=y2kg3MOk1sY)” sur la chaîne Youtube de freeCodeCamp.**
+
+Pour ma part, je me suis appuyé sur la [page web](https://edu.gcfglobal.org/en/computerbasics/#) du concepteur de ce cours, [GCFGlobal](https://edu.gcfglobal.org/en/), pour sélectionner quelques pages et les traduire. Donc, je vais adopter la même structure en abordant le matériel, le logiciel, les systèmes d’exploitation et les types d’ordinateurs.
+
+<aside>
+💡 Tout le contenu de cette note, de cette vidéo provient de la traduction du tutoriel “[Computer Basics](https://edu.gcfglobal.org/en/computerbasics/#)” de [GCFGlobal](https://edu.gcfglobal.org/en/). Je m’en tiens aux [conditions d’utilisation](https://edu.gcfglobal.org/en/info/terms-of-service/1/#) de leur site web qui précise que “***la reproduction et la distribution sont limitées à des fins éducatives sans but lucratif*”**
+
+</aside>
+
+# Qu'est-ce qu'un ordinateur ?
+
+Un **ordinateur** est un appareil électronique qui manipule des informations ou des données. Il a la capacité de **stocker** , **de récupérer** et **de traiter** des données. Vous savez peut-être déjà que vous pouvez utiliser un ordinateur pour **taper des documents** , **envoyer des e-mails** , **jouer à des jeux** et **naviguer sur le Web** . Vous pouvez également l'utiliser pour modifier ou créer **des feuilles de calcul** , **des présentations** et même **des vidéos**.
+
+## Matériel contre logiciel
+
+Avant de parler des différents types d'ordinateurs, parlons de deux choses que tous les ordinateurs ont en commun : **le matériel** et **les logiciels** .
+
+- **Le matériel** est toute partie de votre ordinateur qui possède une **structure physique**, comme le clavier ou la souris. Il comprend également toutes les pièces internes de l'ordinateur, que vous pouvez voir dans l'image ci-dessous.
+    
+    ![https://media.gcflearnfree.org/content/55e0730c7dd48174331f5164_01_17_2014/whatisacomputer_hardware.jpg](https://media.gcflearnfree.org/content/55e0730c7dd48174331f5164_01_17_2014/whatisacomputer_hardware.jpg)
+    
+
+- **Un logiciel** est un **ensemble d'instructions** indiquant au matériel **quoi faire** et **comment le faire**. Les exemples de logiciels incluent les navigateurs Web, les jeux et les traitements de texte.
+    
+    ![https://media.gcflearnfree.org/content/55e0730c7dd48174331f5164_01_17_2014/whatisacomputer_software.jpg](https://media.gcflearnfree.org/content/55e0730c7dd48174331f5164_01_17_2014/whatisacomputer_software.jpg)
+    
+
+Tout ce que vous faites sur votre ordinateur dépend à la fois du matériel et des logiciels. Par exemple, en ce moment, vous visualisez peut-être cette leçon dans un **navigateur Web** (logiciel) et utilisez votre **souris** (matériel) pour cliquer d'une page à l'autre. Au fur et à mesure que vous découvrez les différents types d'ordinateurs, interrogez-vous sur les différences de matériel. Au fur et à mesure que vous progresserez dans ce didacticiel, vous verrez que différents types d'ordinateurs utilisent également souvent différents types de logiciels.
+
+## Quels sont les différents types d'ordinateurs ?
+
+Lorsque la plupart des gens entendent le mot **ordinateur** , ils pensent à un **ordinateur personnel** tel qu'un **ordinateur de bureau** ou **un ordinateur portable** . Cependant, les ordinateurs se présentent sous de nombreuses formes et tailles, et ils remplissent de nombreuses fonctions différentes dans notre vie quotidienne. Lorsque vous retirez de l'argent à un guichet automatique, que vous numérisez des produits d'épicerie au magasin ou que vous utilisez une calculatrice, vous utilisez un type d'ordinateur.
+
+![https://media.gcflearnfree.org/content/55e0730c7dd48174331f5164_01_17_2014/whatisacomputer_types_of_computers.jpg](https://media.gcflearnfree.org/content/55e0730c7dd48174331f5164_01_17_2014/whatisacomputer_types_of_computers.jpg)
+
+### Ordinateurs de bureau
+
+![https://media.gcflearnfree.org/content/55e0730c7dd48174331f5164_01_17_2014/whatisacomputer_desktop_computers.jpg](https://media.gcflearnfree.org/content/55e0730c7dd48174331f5164_01_17_2014/whatisacomputer_desktop_computers.jpg)
+
+De nombreuses personnes utilisent **des ordinateurs de bureau** au travail, à la maison et à l'école. Les ordinateurs de bureau sont conçus pour être placés sur un bureau et sont généralement constitués de plusieurs éléments différents, dont le **boîtier de l'ordinateur** , **l'écran** , **le clavier** et **la souris**.
+
+### Ordinateurs portables
+
+![https://media.gcflearnfree.org/content/55e0730c7dd48174331f5164_01_17_2014/whatisacomputer_laptop_computers.jpg](https://media.gcflearnfree.org/content/55e0730c7dd48174331f5164_01_17_2014/whatisacomputer_laptop_computers.jpg)
+
+Le deuxième type d'ordinateur que vous connaissez peut-être est un **ordinateur portable** , communément appelé ordinateur portable. Les ordinateurs portables sont des ordinateurs alimentés par batterie qui sont **plus portables** que les ordinateurs de bureau, ce qui vous permet de les utiliser presque n'importe où.
+
+### Ordinateurs tablettes
+
+![https://media.gcflearnfree.org/content/55e0730c7dd48174331f5164_01_17_2014/whatisacomputer_tablet_computers.jpg](https://media.gcflearnfree.org/content/55e0730c7dd48174331f5164_01_17_2014/whatisacomputer_tablet_computers.jpg)
+
+**Les tablettes** sont des ordinateurs de poche qui sont encore plus portables que les ordinateurs portables. Au lieu d'un clavier et d'une souris, les tablettes utilisent un **écran tactile** pour la saisie et la navigation. L'**iPad** est un exemple de tablette.
+
+### Les serveurs
+
+![https://media.gcflearnfree.org/content/55e0730c7dd48174331f5164_01_17_2014/whatisacomputer_servers.jpg](https://media.gcflearnfree.org/content/55e0730c7dd48174331f5164_01_17_2014/whatisacomputer_servers.jpg)
+
+Un **serveur** est un ordinateur qui fournit des informations à d'autres ordinateurs sur un réseau. Par exemple, chaque fois que vous utilisez Internet, vous regardez quelque chose qui est stocké sur un serveur. De nombreuses entreprises utilisent également **des serveurs de fichiers** locaux pour stocker et partager des fichiers en interne.
+
+## Autres types d'ordinateurs
+
+De nombreux appareils électroniques d'aujourd'hui sont essentiellement **des ordinateurs spécialisés** , même si nous ne les considérons pas toujours de cette façon. Voici quelques exemples courants.
+
+- **Smartphones** :De nombreux téléphones portables peuvent faire beaucoup de choses que les ordinateurs peuvent faire, y compris naviguer sur Internet et jouer à des jeux. Ils sont souvent appelés **smartphones** .
+- **Wearables** : la technologie portable est un terme général désignant un groupe d'appareils– y compris **les trackers de fitness** et **les montres connectées**—qui sont conçus pour être portés tout au long de la journée. Ces appareils sont souvent appelés **wearables** en abrégé.
+- **Consoles de jeux** : Une **console de jeux** est un type d'ordinateur spécialisé utilisé pour jouer **à des jeux vidéo** sur votre téléviseur.
+- **Téléviseurs** : De nombreux téléviseurs incluent désormais **des applications** — ou **apps** — qui vous permettent d'accéder à divers types de contenu en ligne. Par exemple, vous pouvez diffuser des vidéos depuis Internet directement sur votre téléviseur.
+
+## PC et Mac
+
+Les ordinateurs personnels se présentent sous deux styles principaux : **PC** et **Mac** . Les deux sont entièrement fonctionnels, mais ils ont des présentations et des modes de fonctionnement différents, et beaucoup de gens préfèrent l'un ou l'autre.
+
+### PC
+
+![https://media.gcflearnfree.org/content/55e0730c7dd48174331f5164_01_17_2014/whatisacomputer_pc.jpg](https://media.gcflearnfree.org/content/55e0730c7dd48174331f5164_01_17_2014/whatisacomputer_pc.jpg)
+
+Ce type d'ordinateur a commencé avec l'**IBM PC** original qui a été introduit en 1981. D'autres sociétés ont commencé à créer des ordinateurs similaires, appelés **IBM PC Compatible** (souvent abrégé en **PC** ). Aujourd'hui, il s'agit du type d'ordinateur personnel le plus courant et il comprend généralement le système d'exploitation **Microsoft Windows .**
+
+### Mac
+
+![https://media.gcflearnfree.org/content/55e0730c7dd48174331f5164_01_17_2014/whatisacomputer_mac.jpg](https://media.gcflearnfree.org/content/55e0730c7dd48174331f5164_01_17_2014/whatisacomputer_mac.jpg)
+
+L' ordinateur **Macintosh** a été introduit en 1984, et c'était le premier ordinateur personnel largement vendu avec une interface utilisateur graphique, ou **GUI** (prononcé **gluant** ). Tous les Mac sont fabriqués par une seule entreprise ( **Apple** ) et utilisent presque toujours le système d'exploitation **Mac OS X.**
+
+## Liens cités ou à consulter
+
+- Les notions de base en informatique avec le cours “****[Computer & Technology Basics Course for Absolute Beginners](https://www.youtube.com/watch?v=y2kg3MOk1sY)” sur la chaîne Youtube de freeCodeCamp.**
+- La version écrite du cours : [https://edu.gcfglobal.org/en/computerbasics/#](https://edu.gcfglobal.org/en/computerbasics/#)
+- Le meilleur bootcamp pour passer de zéro à développeur web, [The Odin Project](https://www.theodinproject.com/)

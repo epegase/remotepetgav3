@@ -1,0 +1,151 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import Image from 'next/future/image'
+import awsECSoft from './awsECSoft.png'
+import chrome from './chrome.png'
+import iPadOS from './iPadOS.png'
+import itunes from './itunes.png'
+import linux from './linux.png'
+import macOS from './macOS.png'
+import win11 from './win11.png'
+import word from './word.png'
+
+export const meta = {
+  author: 'Duverger PETGA',
+  date: '2023-03-24',
+  title: 'Prépa Certification Architecte de solutions AWS | Ep.10 : Quelques notions de base en informatique (3/3)',
+  description:
+    'Dans cette note, nous clôturons cette mini-série liée aux notions de bases en informatique, en abordant le volet logiciel des ordinateurs. Pour ce volet, nous avons principalement d\'\ un côté les systèmes d\'\exploitation et de l\'\autre côté les applications.',
+}
+
+export default (props) => <ArticleLayout meta={meta} {...props} />
+
+Bonjour et Bienvenue au Club des Architectes Cloud AWS… La chaîne Youtube dont l’ambition est de rassembler les architectes cloud AWS d’expression francophone sous une même bannière. 
+
+Dans la précédente note, nous avons continué avec les notions de base en informatique. Pourquoi aborder les notions de base en informatique ? Tout simplement parce que la cible principale de ce cours est toute personne désirant changer de carrière et n’ayant pas un solide background en informatique. Et en plus, le développement web commence par votre machine. C’est sur cette machine que vous allez installer les outils de développement, effectuer des téléchargements, des tests et autres. 
+
+Bien que vous soyez immergé dans l’environnement informatique de part votre travail, vos loisirs, l’organisation de votre journée, il est important de clarifier certains concepts pour éviter toute ambiguité dans le sens dans la suite de notre cours. L’informatique fait partie de notre quotidien mais nous devons dépasser le sens commun et aborder professionnellement ce domaine.
+
+Pour ceux qui veulent une présentation concise et précise, consultez la vidéo “****[Computer & Technology Basics Course for Absolute Beginners](https://www.youtube.com/watch?v=y2kg3MOk1sY)” sur la chaîne Youtube de freeCodeCamp.**
+
+Pour ma part, je me suis appuyé sur la [page web](https://edu.gcfglobal.org/en/computerbasics/#) du concepteur de ce cours, [GCFGlobal](https://edu.gcfglobal.org/en/), pour sélectionner quelques pages et les traduire. Donc, je vais adopter la même structure en abordant le matériel, le logiciel, les systèmes d’exploitation et les types d’ordinateurs.
+
+<aside>
+💡 Tout le contenu de cette note, de cette vidéo provient de la traduction du tutoriel “[Computer Basics](https://edu.gcfglobal.org/en/computerbasics/#)” de [GCFGlobal](https://edu.gcfglobal.org/en/). Je m’en tiens aux [conditions d’utilisation](https://edu.gcfglobal.org/en/info/terms-of-service/1/#) de leur site web qui précise que “***la reproduction et la distribution sont limitées à des fins éducatives sans but lucratif*”**
+
+</aside>
+
+Dans la vidéo d’aujoud’hui, nous terminons avec cette mini-série sur les notions de base en informatique en abordant le logiciel.
+
+# 1- ****Comprendre les systèmes d’exploitation****
+
+## Qu'est-ce qu'un système d'exploitation ?
+
+Le **système d'exploitation** est le **logiciel le plus important** qui s'exécute sur un ordinateur. Il gère la **mémoire** et **les processus** de l'ordinateur, ainsi que l'ensemble de ses **logiciels** et **matériels**. Il vous permet également de **communiquer** avec l'ordinateur sans savoir parler le langage de l'ordinateur. **Sans système d'exploitation, un ordinateur ne sert à rien**.
+
+## La fonction du système d'exploitation
+
+**Le système d'exploitation** (**SE**) de votre ordinateur gère tous les **logiciels** et **le matériel** de l'ordinateur. La plupart du temps, plusieurs programmes informatiques différents s'exécutent en même temps et ils ont tous besoin d'accéder à l'**unité centrale de traitement (CPU)**, **à la mémoire** et **au stockage**. Le système d'exploitation coordonne tout cela pour s'assurer que chaque programme obtient ce dont il a besoin.
+
+## Types de systèmes d'exploitation
+
+Les systèmes d'exploitation sont généralement **préchargés** sur n'importe quel ordinateur que vous achetez. La plupart des gens utilisent le système d'exploitation fourni avec leur ordinateur, mais il est possible de mettre à niveau ou même de changer de système d'exploitation. Les trois systèmes d'exploitation les plus courants pour les ordinateurs personnels sont **Microsoft Windows**, **macOS** et **Linux**.
+
+Les systèmes d'exploitation modernes utilisent une **interface utilisateur graphique**, ou **GUI** (*Graphical User Interface*). Une interface graphique vous permet d'utiliser votre souris pour cliquer sur **des icônes**, **des boutons** et **des menus**, et tout est clairement affiché à l'écran en utilisant une combinaison de **graphiques** et **de texte**.
+
+![https://media.gcflearnfree.org/content/55e069691496fdb039ceeecb_01_17_2014/understanding_os_gui_cropped_01404.jpg](https://media.gcflearnfree.org/content/55e069691496fdb039ceeecb_01_17_2014/understanding_os_gui_cropped_01404.jpg)
+
+L'interface graphique de chaque système d'exploitation a une apparence et une convivialité différentes, donc si vous passez à un système d'exploitation différent, cela peut sembler peu familier au début. Cependant, les systèmes d'exploitation modernes sont conçus pour être **faciles à utiliser** et la plupart des principes de base sont les mêmes.
+
+## Microsoft Windows
+
+Microsoft a créé le système d'exploitation **Windows** au milieu des années 1980. Il existe de nombreuses versions différentes de Windows, mais les plus récentes sont **Windows 11** (sorti en 2021) **Windows 10** (sorti en 2015), **Windows 8** (2012), **Windows 7** (2009) et **Windows Vista** (2007). Windows est **préchargé** sur la plupart des nouveaux PC, ce qui en fait le **système d'exploitation le plus populaire** au monde.
+
+ <Image src={win11} alt="illustration microsoft windows 11" />
+
+## macOS
+
+**macOS** (anciennement appelé **OS X** ) est une gamme de systèmes d'exploitation créés par Apple. Il est préchargé sur tous les ordinateurs Macintosh ou Mac. Certaines des versions spécifiques incluent **Mojave** (sorti en 2018), **High Sierra** (2017) et  **Sierra** (2016).
+
+Selon **[StatCounter Global Stats](http://gs.statcounter.com/)**, les utilisateurs de macOS représentent moins de **10 %** des systèmes d'exploitation mondiaux, soit bien moins que le pourcentage d'utilisateurs de Windows (plus de **80%**). L'une des raisons à cela est que les ordinateurs Apple ont tendance à être plus chers. Cependant, de nombreuses personnes préfèrent l'apparence de macOS à Windows.
+
+ <Image src={macOS} alt="illustration MacOS" />
+
+## Linux
+
+**Linux** est une famille de systèmes d'exploitation **open source, ce qui signifie qu'ils peuvent être modifiés et distribués par n'importe qui dans le monde.** Ceci est différent des **logiciels propriétaires** comme Windows, qui ne peuvent être modifiés que par la société qui les possède. Les avantages de Linux sont qu'il est **gratuit** et qu'il existe de nombreuses **distributions** ou versions différentes parmi lesquelles vous pouvez choisir.
+
+ <Image src={linux} alt="illustration os linux" />
+
+Selon **[StatCounter Global Stats](http://gs.statcounter.com/#os-ww-monthly-201202-201301)** , les utilisateurs de Linux représentent moins de **2 %** des systèmes d'exploitation mondiaux. Cependant, la plupart **des serveurs** exécutent Linux car il est relativement facile à personnaliser.
+
+Pour en savoir plus sur les différentes distributions de Linux, visitez les sites Web **[Ubuntu](http://www.ubuntu.com/)** , **[Linux Mint](http://www.linuxmint.com/)** et **[Fedora](http://fedoraproject.org/)**. Pour une liste plus complète, vous pouvez consulter la liste MakeUseOf des **[meilleures distributions Linux](http://www.makeuseof.com/pages/best-linux-distributions)** .
+
+## Systèmes d'exploitation pour appareils mobiles
+
+Les systèmes d'exploitation dont nous avons parlé jusqu'à présent ont été conçus pour fonctionner sur des ordinateurs **de bureau** et **portables**. **Les appareils mobiles** tels que **les téléphones**, **les tablettes** et **les lecteurs MP3** sont différents des ordinateurs de bureau et des ordinateurs portables. Ils exécutent donc des systèmes d'exploitation spécialement conçus pour les appareils mobiles. Des exemples de systèmes d'exploitation mobiles incluent **Apple iOS** et **Google Android**. Dans la capture d'écran ci-dessous, vous pouvez voir iOS en cours d'exécution sur un iPad.
+
+ <Image src={iPadOS} alt="illustration iPadOS" />
+
+Ces systèmes d'exploitation pour appareils mobiles ne sont généralement pas aussi complets que ceux conçus pour les ordinateurs de bureau et portables, et ils ne sont pas capables d'exécuter tous les mêmes logiciels. Cependant, vous pouvez toujours faire beaucoup de choses avec eux, comme regarder des films, naviguer sur le Web, gérer votre calendrier et jouer à des jeux.
+
+# 2- ****Comprendre les applications****
+
+## Qu'est-ce qu'une application ?
+
+Vous avez peut-être entendu des gens parler de l'utilisation d'un **programme**, d'une **application** ou d'une **appli**. Mais qu'est ce que cela veut dire exactement? En termes simples, une **application** est un type de logiciel qui vous permet d' **effectuer des tâches spécifiques**. Les applications pour ordinateurs de bureau ou portables sont parfois appelées **applications de bureau**, tandis que celles pour appareils mobiles sont appelées **applications mobiles**.
+
+Lorsque vous ouvrez une application, elle s'exécute dans le **système d'exploitation** jusqu'à ce que vous la fermiez. La plupart du temps, vous aurez plus d'une application ouverte en même temps, c'est ce qu'on appelle le **multitâche** .
+
+**App** est un terme courant pour une **application** , en particulier pour **les applications simples** qui peuvent être téléchargées **à peu de frais** ou même **gratuitement** . De nombreuses applications sont également disponibles pour **les appareils mobiles** et même certains **téléviseurs** .
+
+## Applications de bureau
+
+Il existe d'innombrables applications de bureau, et elles se répartissent en plusieurs catégories. Certains sont plus **complets** (comme **Microsoft Word** ), tandis que d'autres ne peuvent faire **qu'une ou deux choses** (comme une **horloge** ou une application **de calendrier**). Vous trouverez ci-dessous quelques types d'applications que vous pourriez utiliser.
+
+- **Traitements de texte** : Un traitement de texte vous permet d'écrire une lettre, de concevoir un dépliant et de créer de nombreux autres types de documents. Le traitement de texte le plus connu est **Microsoft Word**.
+
+ <Image src={word} alt="illustration application Word" />
+
+- **Navigateurs Web** : Un **navigateur Web** est l'outil que vous utilisez pour accéder à **Internet** . La plupart des ordinateurs sont livrés avec un navigateur Web **préinstallé** , mais vous pouvez également en télécharger un autre si vous préférez. Des exemples de navigateurs incluent **Internet Explorer**, **Mozilla Firefox**, **Google Chrome** et **Safari**.
+
+ <Image src={chrome} alt="illustration navigateur chrome" />
+
+- **Lecteurs multimédias** : si vous souhaitez écouter des **fichiers MP3** ou regarder **des films** que vous avez téléchargés, vous devez utiliser un **lecteur multimédia** . **Windows Media Player** et **iTunes** sont des lecteurs multimédias populaires.
+
+ <Image src={itunes} alt="illustration application iTunes" />
+
+- **Jeux** : Il existe de nombreux types de jeux auxquels vous pouvez jouer sur votre ordinateur. Ils vont des jeux de cartes comme **Solitaire** aux jeux d'action comme **Halo**. De nombreux jeux d'action nécessitent beaucoup de **puissance de calcul** , ils peuvent donc ne pas fonctionner à moins que vous n'ayez un ordinateur plus récent.
+
+## Application mobile
+
+Les ordinateurs de bureau et portables ne sont pas les seuls appareils capables d'exécuter des applications. Vous pouvez également télécharger des applications pour les appareils mobiles tels que **les smartphones** et **les tablettes** . Voici quelques exemples d'applications mobiles.
+
+![https://media.gcflearnfree.org/content/55e073347dd48174331f5171_01_17_2014/Understanding_Mobile_Apps_ForWeb.jpg](https://media.gcflearnfree.org/content/55e073347dd48174331f5171_01_17_2014/Understanding_Mobile_Apps_ForWeb.jpg)
+
+- **Gmail** : vous pouvez utiliser l'application Gmail pour afficher et envoyer facilement des e-mails depuis votre appareil mobile. Il est disponible pour les appareils **[Android](https://play.google.com/store/apps/details?id=com.google.android.gm)** et **[iOS](https://itunes.apple.com/us/app/gmail-email-from-google/id422689480)**.
+- **Instagram** : vous pouvez utiliser Instagram pour partager rapidement des photos avec vos amis et votre famille. Il est disponible pour **[Android](https://play.google.com/store/apps/details?id=com.instagram.android)** et **[iOS](https://itunes.apple.com/app/instagram/id389801252)**.
+- **Duolingo** : Avec une combinaison de quiz, de jeux et d'autres activités, cette application peut vous aider à apprendre de nouvelles langues. Il est disponible pour **[Android](https://play.google.com/store/apps/details?id=com.duolingo&hl=en)** et **[iOS](https://itunes.apple.com/app/duolingo-learn-spanish-french/id570060128?mt=8)**.
+
+## Installation de nouvelles applications
+
+Chaque ordinateur et appareil mobile sera livré avec certaines applications déjà intégrées, telles qu'un navigateur Web et un lecteur multimédia. Cependant, vous pouvez également acheter et installer de nouvelles applications pour ajouter plus de fonctionnalités. 
+
+![https://media.gcflearnfree.org/content/55e073347dd48174331f5171_01_17_2014/Understanding_Downloading_Apps_ForWeb.jpg](https://media.gcflearnfree.org/content/55e073347dd48174331f5171_01_17_2014/Understanding_Downloading_Apps_ForWeb.jpg)
+
+# 3- Est-ce nécessaire d’en parler ?
+
+Au parcours de cette note, certains vont se demander quel est le lien entre cette présentation et l’architecte cloud ? Je pourrais illustrer ce lien de plusieurs manières mais je le ferai simplement par une seule image, [les systèmes d’exploitation proposés pour le service de calcul EC2 d’Amazon](https://aws.amazon.com/fr/ec2/features/) : 
+
+ <Image src={awsECSoft} alt="illustration AWS EC2 logiciels" />
+
+AWS offre la possibilité de “*composer*” votre ordinateur en fonction de votre charge de travail : vous pouvez choisir le matériel et le logiciel. Je ne vais pas entrer dans les détails mais il était important de créer un lien entre ce qui est présenté aujourd’hui et ce qui nous attend plus tard.
+
+Nous avons terminé cette partie sur les notions de base en informatique et dans la prochaine note, nous reprenons notre parcours de développement web en présentant de façon simplifiée le fonctionnement d’Internet.
+
+## Liens cités ou à consulter
+
+- Les notions de base en informatique avec le cours “****[Computer & Technology Basics Course for Absolute Beginners](https://www.youtube.com/watch?v=y2kg3MOk1sY)” sur la chaîne Youtube de freeCodeCamp.**
+- La version écrite du cours : [https://edu.gcfglobal.org/en/computerbasics/#](https://edu.gcfglobal.org/en/computerbasics/#)
+- Le meilleur bootcamp pour passer de zéro à développeur web, [The Odin Project](https://www.theodinproject.com/)
+
+Dans cette vidéo, nous avons terminé avec les notions de bases en informatique,

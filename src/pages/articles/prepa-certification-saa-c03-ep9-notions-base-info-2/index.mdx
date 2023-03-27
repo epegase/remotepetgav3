@@ -1,0 +1,321 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import Image from 'next/future/image'
+import avantOrdi from "./avantOrdi.png"
+import arrierOrdi from './arriereOrdi.png'
+import imprimante from './imprimante.png'
+import audioEquipement from './audioEquipement.png'
+import micro from './micro.png'
+import paveLaptop from './paveLaptop.png'
+import branchementLaptop from './brachementLaptop.png'
+import materielAWS from './materielAWS.png'
+import clavier from './clavier.png'
+
+
+
+export const meta = {
+  author: 'Duverger PETGA',
+  date: '2023-03-23',
+  title: 'Prépa Certification Architecte de solutions AWS | Ep.9 : Quelques notions de base en informatique (2/3)',
+  description:
+    'Dans cette note, nous continuons avec les notions de bases en informatique, en faisant un arrêt sur le matériel. Les composantes de bases d\'\ un ordinateur, au niveau du matériel, sont le boitier, le moniteur, le clavier, la souris. A l\'\ intérieur de l\'\ ordinateur, on retrouve le processeur, la carte mère, la RAM, le disque dur, le bloc d\'\ alimentation, carte vidéo, carte son, carte réseau,…etc. Les ordinateurs portables et même les appareils mobiles disposent aussi de ces mêmes composantes, même si certains peuvent se présenter différemment aux utilisateurs.',
+}
+
+export default (props) => <ArticleLayout meta={meta} {...props} />
+
+Bonjour et Bienvenue au Club des Architectes Cloud AWS… La chaîne Youtube dont l’ambition est de rassembler les architectes cloud AWS d’expression francophone sous une même bannière. 
+
+Dans la précédente note, nous avons abordé les notions de base en informatique. Pourquoi aborder les notions de base en informatique ? Tout simplement parce que la cible principale de ce cours est toute personne désirant changer de carrière et n’ayant pas un solide background en informatique. Et en plus, le développement web commence par votre machine. C’est sur cette machine que vous allez installer les outils de développement, effectuer des téléchargements, des tests et autres. 
+
+Bien que vous soyez immergé dans l’environnement informatique de part votre travail, vos loisirs, l’organisation de votre journée, il est important de clarifier certains concepts pour éviter toute ambiguité dans le sens dans la suite de notre cours. L’informatique fait partie de notre quotidien mais nous devons dépasser le sens commun et aborder professionnellement ce domaine.
+
+Pour ceux qui veulent une présentation concise et précise, consultez la vidéo “****[Computer & Technology Basics Course for Absolute Beginners](https://www.youtube.com/watch?v=y2kg3MOk1sY)” sur la chaîne Youtube de freeCodeCamp.**
+
+Pour ma part, je me suis appuyé sur la [page web](https://edu.gcfglobal.org/en/computerbasics/#) du concepteur de ce cours, [GCFGlobal](https://edu.gcfglobal.org/en/), pour sélectionner quelques pages et les traduire. Donc, je vais adopter la même structure en abordant le matériel, le logiciel, les systèmes d’exploitation et les types d’ordinateurs.
+
+<aside>
+💡 Tout le contenu de cette note, de cette vidéo provient de la traduction du tutoriel “[Computer Basics](https://edu.gcfglobal.org/en/computerbasics/#)” de [GCFGlobal](https://edu.gcfglobal.org/en/). Je m’en tiens aux [conditions d’utilisation](https://edu.gcfglobal.org/en/info/terms-of-service/1/#) de leur site web qui précise que “***la reproduction et la distribution sont limitées à des fins éducatives sans but lucratif*”**
+
+</aside>
+
+# 1- ****Composants de base d'un ordinateur****
+
+## Introduction
+
+Les éléments de base d'un ordinateur de bureau sont le **boîtier de l'ordinateur**, **le moniteur**, **le clavier**, **la souris** et **le cordon d'alimentation**. Chaque partie joue un **rôle important** chaque fois que vous utilisez un ordinateur.
+
+## Boitier d'ordinateur
+
+![https://media.gcflearnfree.org/content/55e073137dd48174331f5166_01_17_2014/basic_computer_parts_cases.jpg](https://media.gcflearnfree.org/content/55e073137dd48174331f5166_01_17_2014/basic_computer_parts_cases.jpg)
+
+Le **boîtier de l'ordinateur** est la boîte en métal et en plastique qui **contient les principaux composants** de l'ordinateur, y compris la carte mère, l'unité centrale de traitement (CPU) et l'alimentation. L'avant du boîtier comporte généralement un **bouton Marche/Arrêt** et un ou plusieurs **lecteurs optiques** .
+
+Les boîtiers d'ordinateur se présentent sous différentes formes et tailles. Un **boîtier de bureau** repose à plat sur un bureau et le moniteur est généralement posé dessus. Un **boîtier** est grand et se trouve à côté du moniteur ou sur le sol. **Les ordinateurs tout-en-un** sont livrés avec les composants internes intégrés au moniteur, ce qui élimine le besoin d'un boîtier séparé.
+
+## Moniteur
+
+![https://media.gcflearnfree.org/content/55e073137dd48174331f5166_01_17_2014/basic_computer_parts_monitor.jpg](https://media.gcflearnfree.org/content/55e073137dd48174331f5166_01_17_2014/basic_computer_parts_monitor.jpg)
+
+Le **moniteur** fonctionne avec une **carte vidéo** , située à l'intérieur du boîtier de l'ordinateur, pour afficher des images et du texte sur l'écran. La plupart des moniteurs ont **des boutons de commande** qui vous permettent de modifier les paramètres d'affichage de votre moniteur, et certains moniteurs ont également des haut-parleurs intégrés.
+
+Les nouveaux moniteurs ont généralement des écrans **LCD** (affichage à cristaux liquides) ou **LED** (diode électroluminescente). Ceux-ci peuvent être très fins et sont souvent appelés **écrans plats** . Les moniteurs plus anciens utilisent des écrans **CRT** (tube cathodique). Les moniteurs CRT sont beaucoup plus grands et plus lourds, et ils occupent plus d'espace sur le bureau.
+
+## Clavier
+
+Le **clavier** est l'un des principaux moyens de communication avec un ordinateur. Il existe de nombreux types de claviers différents, mais la plupart sont **très similaires** et vous permettent d'accomplir les mêmes tâches de base.
+
+  <Image src={clavier} alt="illustration clavier" />
+
+## Souris
+
+![https://media.gcflearnfree.org/content/55e073137dd48174331f5166_01_17_2014/basic_computer_parts_mouse.jpg](https://media.gcflearnfree.org/content/55e073137dd48174331f5166_01_17_2014/basic_computer_parts_mouse.jpg)
+
+La **souris** est un autre outil important pour communiquer avec les ordinateurs. Communément appelé **dispositif de pointage** , il vous permet **de pointer** sur des objets à l'écran, **de cliquer** dessus et de les **déplacer** .
+
+Il existe deux principaux types de souris : optique et mécanique. La souris **optique** utilise un œil électronique pour détecter les mouvements et est plus facile à nettoyer. La **souris mécanique** utilise une bille roulante pour détecter les mouvements et nécessite un nettoyage régulier pour fonctionner correctement.
+
+## Alternatives à la souris
+
+Il existe d'autres appareils qui peuvent faire la même chose qu'une souris. De nombreuses personnes les trouvent plus faciles à utiliser et nécessitent également moins d'espace sur le bureau qu'une souris traditionnelle. Les alternatives de souris les plus courantes sont présentées ci-dessous.
+
+- **Trackball** : Un trackball a une boule qui peut tourner librement. Au lieu de déplacer l'appareil comme une souris, vous pouvez faire rouler la balle avec votre pouce pour déplacer le pointeur.
+- **Pavé tactile** : un pavé tactile, également appelé **pavé tactile** , est un pavé tactile qui vous permet de contrôler le pointeur en effectuant un mouvement de dessin avec votre doigt. Les pavés tactiles sont courants sur les ordinateurs portables.
+    
+    ![https://media.gcflearnfree.org/content/55e073137dd48174331f5166_01_17_2014/basic_computer_parts_touchpad.jpg](https://media.gcflearnfree.org/content/55e073137dd48174331f5166_01_17_2014/basic_computer_parts_touchpad.jpg)
+    
+    # 2- ****Boutons et ports sur un ordinateur****
+    
+    ## Introduction
+    
+    Jetez un coup d'œil à l'avant et à l'arrière du boîtier de votre ordinateur et comptez le nombre de **boutons** , **de ports** et **d'emplacements** que vous voyez. Maintenant, regardez votre moniteur et comptez tout ce que vous y trouverez. Vous en avez probablement compté au moins 10, et peut-être beaucoup plus.
+    
+    Chaque ordinateur étant différent, les boutons, les ports et les prises varient **d'un ordinateur à l'autre** . Cependant, il y en a certains que vous pouvez vous attendre à trouver sur la plupart des ordinateurs de bureau. Apprendre comment ces ports sont utilisés vous aidera chaque fois que vous aurez besoin de connecter quelque chose à votre ordinateur, comme une nouvelle imprimante, un clavier ou une souris.
+    
+    ## **Avant d'un boîtier d'ordinateur**
+    
+    <Image src={avantOrdi} alt="illustration avant ordinateur" />
+    
+    **Lecteur de disque optique**
+    
+    Souvent appelé lecteur **de CD-ROM** ou **de DVD-ROM** , il permet à votre ordinateur de lire des CD et des DVD.
+    
+    **Bouton d'alimentation**
+    
+    Le bouton d'alimentation est utilisé pour **allumer** et **éteindre** l'ordinateur .
+    
+    **Entrée audio/Sortie audio**
+    
+    De nombreux ordinateurs incluent **des ports audio** à l'avant du boîtier de l'ordinateur qui vous permettent de connecter facilement **des haut-parleurs** , **des microphones** et **des casques** sans avoir à tâtonner avec l'arrière de l'ordinateur.
+    
+    **Port USB (bus série universel)**
+    
+    La plupart des ordinateurs de bureau ont plusieurs **ports USB** . Ceux-ci peuvent être utilisés pour connecter presque tous les types d'appareils, y compris les souris, les claviers, les imprimantes et les appareils photo numériques. Ils apparaissent souvent à l'avant et à l'arrière de l'ordinateur.
+    
+    ## Arrière d'un boîtier d'ordinateur
+    
+    L'arrière d'un boîtier d'ordinateur comporte **des ports de connexion** conçus pour s'adapter à **des périphériques spécifiques** . L'emplacement varie d'un ordinateur à l'autre et de nombreuses entreprises ont leurs propres connecteurs spéciaux pour des appareils spécifiques. Certains des ports peuvent être **codés par couleur** pour vous aider à déterminer quel port est utilisé avec un périphérique particulier.
+    
+    <Image src={arrierOrdi} alt="illustration arriere ordinateur" />
+    
+    **Entrée audio/Sortie audio**
+    
+    **Presque tous les ordinateurs disposent de deux ports audio** ou plus sur lesquels vous pouvez connecter divers périphériques, notamment des haut-parleurs, des microphones et des casques.
+    
+    **Port moniteur**
+    
+    C'est ici que vous connecterez **le câble de votre moniteur** . Dans cet exemple, l'ordinateur possède à la fois un port DisplayPort et un port VGA. D'autres ordinateurs peuvent avoir d'autres types de ports de moniteur, tels que DVI (interface visuelle numérique) ou HDMI (interface multimédia haute définition).
+    
+    **Port moniteur**
+    
+    C'est ici que vous connecterez **le câble de votre moniteur** . Dans cet exemple, l'ordinateur possède à la fois un port DisplayPort et un port VGA. D'autres ordinateurs peuvent avoir d'autres types de ports de moniteur, tels que DVI (interface visuelle numérique) ou HDMI (interface multimédia haute définition).
+    
+    **Port Ethernet**
+    
+    Ce port ressemble beaucoup au **modem** ou au port téléphonique, mais il est légèrement plus large. Vous pouvez utiliser ce port pour **la mise en réseau** et la connexion à Internet.
+    
+    **Port série**
+    
+    Ce port est moins courant sur les ordinateurs d'aujourd'hui. Il était fréquemment utilisé pour connecter **des périphériques** tels que des appareils photo numériques, mais il a été remplacé par des ports USB et d'autres types de ports.
+    
+    **PS/2**
+    
+    Ces ports sont parfois utilisés pour connecter la **souris** et **le clavier** . En règle générale, le port de la souris est **vert** et le port du clavier est **violet** . Sur les nouveaux ordinateurs, ces ports ont été remplacés par USB.
+    
+    **Emplacements d'extension**
+    
+    Ces emplacements vides sont là où **les cartes d'extension** sont ajoutées aux ordinateurs. Par exemple, si votre ordinateur n'est pas fourni avec une carte vidéo, vous pouvez en acheter une et l'installer ici.
+    
+    **Prise de courant**
+    
+    C'est ici que vous connecterez le **cordon d'alimentation** à l'ordinateur.
+    
+    ## Autres types de ports
+    
+    Il existe de nombreux autres types de ports, tels que FireWire, Thunderbolt et HDMI. Si votre ordinateur possède des ports que vous ne reconnaissez pas, vous devriez consulter votre manuel pour plus d'informations.
+    
+    ## Périphériques que vous pouvez utiliser avec votre ordinateur
+    
+    La configuration la plus basique de l'ordinateur comprend généralement le **boîtier de l'ordinateur**, **le moniteur**, **le clavier** et **la souris**, mais vous pouvez brancher de nombreux types de périphériques différents sur les ports supplémentaires de votre ordinateur. Ces appareils sont appelés **périphériques**. Jetons un coup d'œil à certains des plus courants. 
+    
+    - **Imprimantes** : Une **imprimante** est utilisée pour **imprimer** des documents, des photos et tout ce qui apparaît sur votre écran. Il existe de nombreux types d'imprimantes, notamment les imprimantes **à jet d'encre** , **laser** et **photo**. Il existe même **des imprimantes tout-en-un** , qui peuvent également numériser et copier des documents.
+    
+    <Image src={imprimante} alt="illustration imprimante" />
+    
+- **Scanners** : Un **scanner** vous permet de **copier une image physique ou un document** et de l'enregistrer sur votre ordinateur sous forme d' image **numérique (lisible par ordinateur)** . De nombreux scanners sont inclus dans une imprimante tout-en-un, bien que vous puissiez également acheter un scanner **à plat** ou **portable** séparé.
+- **Haut-parleurs/casque** : **les haut-parleurs** et **les écouteurs** sont des périphériques de sortie, ce qui signifie qu'ils envoient des informations de l'ordinateur à l'utilisateur. Dans ce cas, ils vous permettent d' **entendre du son et de la musique** . Selon le modèle, ils peuvent se connecter au port **audio** ou au port **USB** . Certains moniteurs ont également des haut-parleurs intégrés.
+
+<Image src={audioEquipement} alt="equipement audio" />
+
+- **Microphones** : Un **microphone** est un type de périphérique d'entrée ou un périphérique qui reçoit des informations d'un utilisateur. Vous pouvez connecter un microphone pour **enregistrer du son** ou **parler avec quelqu'un d'autre** sur Internet. De nombreux ordinateurs portables sont équipés de microphones intégrés.
+
+<Image src={micro} alt="illustration microphone" />
+
+- **Caméras Web** : une **caméra Web** (ou **webcam)** est un type de périphérique d'entrée qui peut enregistrer **des vidéos** et prendre **des photos** . Il peut également transmettre des vidéos sur Internet en **temps réel** , ce qui permet de **discuter en vidéo** ou **de faire des vidéoconférences** avec quelqu'un d'autre. De nombreuses webcams incluent également un microphone pour cette raison.
+- **Contrôleurs de jeu** et **joysticks** : Un contrôleur de jeu est utilisé pour contrôler les jeux informatiques. Il existe de nombreux autres types de contrôleurs que vous pouvez utiliser, y compris **les joysticks** , bien que vous puissiez également utiliser votre **souris** et **votre clavier** pour contrôler la plupart des jeux.
+- **Appareils photo numériques** : Un **appareil photo numérique** vous permet de capturer des photos et des vidéos dans un format numérique. En connectant l'appareil photo au port USB de votre ordinateur, vous pouvez transférer les images de l'appareil photo vers l'ordinateur.
+- **Téléphones portables, baladeurs MP3, tablettes et autres appareils** :Chaque fois que vous achetez un appareil électronique, tel qu'un téléphone portable ou un lecteur MP3, vérifiez s'il est fourni avec un **câble USB** . Si c'est le cas, cela signifie que vous pouvez très probablement le connecter à votre ordinateur.
+
+# 3- **À l'intérieur d'un ordinateur**
+
+Avez-vous déjà regardé **à l'intérieur d'un boîtier d'ordinateur** ou vu des photos de l'intérieur d'un ordinateur ? Les petites pièces peuvent sembler compliquées, mais l'intérieur d'un boîtier d'ordinateur n'est pas vraiment mystérieux. Cette leçon vous aidera à maîtriser une partie de la **terminologie** de base et à comprendre un peu plus ce qui se passe à l'intérieur d'un ordinateur.
+
+## Carte mère
+
+![https://media.gcflearnfree.org/content/55e073157dd48174331f5168_01_17_2014/Inside_Motherboard_v1-02.jpg](https://media.gcflearnfree.org/content/55e073157dd48174331f5168_01_17_2014/Inside_Motherboard_v1-02.jpg)
+
+La **carte mère** est le **circuit imprimé principal** de l'ordinateur . Il s'agit d'une plaque mince qui contient le processeur, la mémoire, les connecteurs du disque dur et des lecteurs optiques, les cartes d'extension pour contrôler la vidéo et l'audio, et les connexions aux ports de votre ordinateur (tels que les ports USB). La carte mère se connecte directement ou indirectement à chaque partie de l'ordinateur.
+
+## CPU/processeur
+
+![https://media.gcflearnfree.org/content/55e073157dd48174331f5168_01_17_2014/Inside_CPU-02.jpg](https://media.gcflearnfree.org/content/55e073157dd48174331f5168_01_17_2014/Inside_CPU-02.jpg)
+
+L'unité centrale de traitement (CPU), également appelée **processeur** , est située à l'intérieur du **boîtier de l'ordinateur** sur la carte mère. Il est parfois appelé le cerveau de l'ordinateur et son travail consiste à exécuter des commandes. Chaque fois que vous appuyez sur une touche, cliquez sur la souris ou démarrez une application, vous envoyez des instructions au processeur.
+
+Le processeur est généralement un **carré en céramique de deux pouces** avec une **puce en silicium** située à l'intérieur. La puce a généralement la taille d'une vignette. Le CPU s'insère dans le **socket CPU** de la carte mère , qui est recouvert par le **dissipateur thermique** , un objet qui absorbe la chaleur du CPU.
+
+**La vitesse** d'un processeur est mesurée en **mégahertz (MHz)** , soit en millions d'instructions par seconde ; et **gigahertz (GHz)** , soit des milliards d'instructions par seconde. Un processeur plus rapide peut exécuter des instructions plus rapidement. Cependant, la vitesse réelle de l'ordinateur dépend de la vitesse de nombreux composants différents, et pas seulement du processeur.
+
+## RAM (mémoire vive)
+
+![https://media.gcflearnfree.org/content/55e073157dd48174331f5168_01_17_2014/Inside_RAM-02.jpg](https://media.gcflearnfree.org/content/55e073157dd48174331f5168_01_17_2014/Inside_RAM-02.jpg)
+
+La RAM est **la mémoire à court terme** de votre système . Chaque fois que votre ordinateur effectue des calculs, il stocke temporairement les données dans la RAM jusqu'à ce qu'elles soient nécessaires.
+
+Cette **mémoire à court terme disparaît** lorsque l'ordinateur est éteint. Si vous travaillez sur un document, une feuille de calcul ou un autre type de fichier, vous devrez l' **enregistrer** pour éviter de le perdre. Lorsque vous enregistrez un fichier, les données sont écrites sur le **disque dur** , qui sert **de stockage à long terme** .
+
+La RAM est mesurée en **mégaoctets (Mo) ou en gigaoctets (Go)** . Plus vous avez **de RAM** , plus votre ordinateur peut faire de choses en même temps. Si vous n'avez pas assez de RAM, vous remarquerez peut-être que votre ordinateur est lent lorsque plusieurs programmes sont ouverts. Pour cette raison, de nombreuses personnes ajoutent **de la RAM supplémentaire** à leurs ordinateurs pour améliorer les performances.
+
+## Disque dur
+
+![https://media.gcflearnfree.org/content/55e073157dd48174331f5168_01_17_2014/Inside_HardDrive-both-02.jpg](https://media.gcflearnfree.org/content/55e073157dd48174331f5168_01_17_2014/Inside_HardDrive-both-02.jpg)
+
+Le **disque dur** est l'endroit où sont stockés vos logiciels, documents et autres fichiers. Le disque dur est **un stockage à long terme** , ce qui signifie que les données sont toujours enregistrées même si vous éteignez l'ordinateur ou le débranchez.
+
+Lorsque vous exécutez un programme ou ouvrez un fichier, l'ordinateur copie certaines des données du **disque dur** sur la **RAM** . Lorsque vous **enregistrez** un fichier, les données sont recopiées sur le **disque dur** . Plus le disque dur est rapide, plus votre ordinateur peut **démarrer** et **charger des programmes** rapidement .
+
+## Bloc d'alimentation
+
+![https://media.gcflearnfree.org/content/55e073157dd48174331f5168_01_17_2014/Inside_power-supply-02.jpg](https://media.gcflearnfree.org/content/55e073157dd48174331f5168_01_17_2014/Inside_power-supply-02.jpg)
+
+Le bloc d'alimentation d'un ordinateur **convertit l'alimentation** de la prise murale en type d'alimentation nécessaire à l'ordinateur. Il envoie l'alimentation via des câbles à la carte mère et à d'autres composants.
+
+Si vous décidez d'ouvrir le boîtier de l'ordinateur et d'y jeter un coup d'œil, assurez-vous d'abord de **débrancher** l'ordinateur. Avant de toucher l'intérieur de l'ordinateur, vous devez toucher un objet métallique mis à la terre—ou une partie métallique du boîtier de l'ordinateur— pour décharger toute accumulation d'électricité statique. L'électricité statique peut être transmise à travers les circuits de l'ordinateur, ce qui peut endommager gravement votre machine.
+
+## Cartes d'extension
+
+La plupart des ordinateurs ont **des connecteurs d'extension** sur la carte mère qui vous permettent d'ajouter différents types de **cartes d'extension** . Celles-ci sont parfois appelées **cartes PCI (peripheral component interconnect)** . Vous n'aurez peut-être jamais besoin d'ajouter de cartes PCI car la plupart des cartes mères ont des capacités vidéo, audio, réseau et autres intégrées.
+
+Cependant, si vous souhaitez booster les performances de votre ordinateur ou mettre à jour les capacités d'un ordinateur plus ancien, vous pouvez toujours ajouter une ou plusieurs cartes. Vous trouverez ci-dessous certains des types de cartes d'extension les plus courants.
+
+## Carte vidéo
+
+![https://media.gcflearnfree.org/content/55e073157dd48174331f5168_01_17_2014/Inside_video-card-02.jpg](https://media.gcflearnfree.org/content/55e073157dd48174331f5168_01_17_2014/Inside_video-card-02.jpg)
+
+La **carte vidéo** est responsable de **ce que vous voyez** sur le moniteur. La plupart des ordinateurs ont un **GPU (unité de traitement graphique)** intégré à la carte mère au lieu d'avoir une carte vidéo séparée. Si vous aimez jouer à des jeux gourmands en ressources graphiques, vous pouvez ajouter une carte vidéo plus rapide à l'un des **connecteurs d'extension** pour obtenir de meilleures performances.
+
+## Carte son
+
+La **carte son**—également appelée carte audio— est responsable de **ce que vous entendez** dans les haut-parleurs ou les écouteurs. La plupart des cartes mères ont un son intégré, mais vous pouvez passer à une carte son dédiée pour un son de meilleure qualité.
+
+## Carte réseau
+
+![https://media.gcflearnfree.org/content/55e073157dd48174331f5168_01_17_2014/Inside_wifi-card-02.jpg](https://media.gcflearnfree.org/content/55e073157dd48174331f5168_01_17_2014/Inside_wifi-card-02.jpg)
+
+La **carte réseau** permet à votre ordinateur de communiquer sur un réseau et d'accéder à Internet. Il peut soit se connecter avec un câble **Ethernet** , soit via une connexion **sans fil (souvent appelée Wi-Fi** ). De nombreuses cartes mères ont des connexions réseau intégrées et une carte réseau peut également être ajoutée à un connecteur d'extension.
+
+## Carte Bluetooth (ou adaptateur)
+
+![https://media.gcflearnfree.org/content/55e073157dd48174331f5168_01_17_2014/Inside_USB-dongle-02.jpg](https://media.gcflearnfree.org/content/55e073157dd48174331f5168_01_17_2014/Inside_USB-dongle-02.jpg)
+
+Bluetooth est une technologie de communication sans fil sur de courtes distances. Il est souvent utilisé dans les ordinateurs pour communiquer avec **des claviers** , **des souris** et **des imprimantes** sans fil . Il est généralement intégré à la carte mère ou inclus dans une **carte réseau sans fil** . Pour les ordinateurs qui ne disposent pas de Bluetooth, vous pouvez acheter un adaptateur USB, souvent appelé **dongle** .
+
+# 4- Ordinateurs Portables
+
+## Qu'est-ce qu'un ordinateur portable ?
+
+Un ordinateur portable est un ordinateur personnel qui peut être **facilement déplacé** et utilisé dans une variété d'endroits. La plupart des ordinateurs portables sont conçus pour avoir toutes les fonctionnalités d'un ordinateur de bureau, ce qui signifie qu'ils peuvent généralement exécuter le même **logiciel** et ouvrir les mêmes types de **fichiers** . Cependant, les ordinateurs portables ont également tendance à être plus chers que les ordinateurs de bureau comparables.
+
+## En quoi un ordinateur portable est-il différent d'un ordinateur de bureau ?
+
+Parce que les ordinateurs portables sont conçus pour la portabilité, il existe des différences importantes entre eux et les ordinateurs de bureau. Un ordinateur portable a une **conception tout-en-un , avec un moniteur** intégré , **un clavier** , **un pavé tactile** (qui remplace la souris) et **des haut-parleurs** . Cela signifie qu'il est entièrement fonctionnel, même lorsqu'aucun périphérique n'est connecté. Un ordinateur portable est également plus rapide à configurer et il y a moins de câbles gênants.
+
+Vous aurez également la possibilité de connecter une souris ordinaire, un moniteur plus grand et d'autres périphériques. Cela transforme essentiellement **votre ordinateur portable en ordinateur de bureau** , avec une différence principale : vous pouvez facilement déconnecter les périphériques et emporter l'ordinateur portable avec vous partout où vous allez.
+
+Voici les principales différences auxquelles vous pouvez vous attendre avec un ordinateur portable.
+
+- **Pavé tactile :** un pavé tactile— également appelé **pavé tactile —** est un pavé tactile qui vous permet de contrôler le pointeur en effectuant un mouvement de dessin avec votre doigt.
+
+<Image src={paveLaptop} alt="pavé Laptop" />
+
+- **Batterie :** Chaque ordinateur portable est équipé d'une batterie, ce qui vous permet d'utiliser l'ordinateur portable lorsqu'il n'est pas branché. Chaque fois que vous branchez l'ordinateur portable, la batterie **se recharge** . Un autre avantage d'avoir une batterie est qu'elle peut fournir **une alimentation de secours** à l'ordinateur portable en cas de panne de courant.
+- **Adaptateur secteur :** un ordinateur portable est généralement équipé d'un câble d'alimentation spécialisé appelé **adaptateur secteur** , conçu pour être utilisé avec ce type spécifique d'ordinateur portable.
+
+<Image src={branchementLaptop} alt="iadaptateur laptop" />
+
+- **Ports :** la plupart des ordinateurs portables ont les mêmes types de ports que ceux des ordinateurs de bureau (tels que **USB** ), bien qu'ils aient généralement **moins de ports** pour économiser de l'espace. Cependant, certains ports peuvent être différents et vous aurez peut-être besoin d'un adaptateur pour les utiliser.
+- **Prix** : De manière générale, les ordinateurs portables ont tendance à être **plus chers** qu'un ordinateur de bureau avec les mêmes composants internes. Bien que vous puissiez constater que certains ordinateurs portables de base coûtent moins cher que les ordinateurs de bureau, ce sont généralement des machines beaucoup moins puissantes.
+
+# 5- Appareils mobiles
+
+## Qu'est-ce qu'un appareil mobile ?
+
+Un appareil mobile est un terme général désignant tout type d' **ordinateur de poche** . Ces appareils sont conçus pour être extrêmement portables et peuvent souvent tenir dans la main. Certains appareils mobiles, comme **les tablettes** , **les liseuses** et **les téléphones intelligents** , sont assez puissants pour faire la plupart des choses que vous pouvez faire avec un ordinateur de bureau ou un ordinateur portable.
+
+## Ordinateurs tablettes
+
+Comme les ordinateurs portables, **les tablettes** sont conçues pour être portables. Cependant, ils offrent une expérience informatique différente. La différence la plus évidente est que les tablettes n'ont pas de clavier ni de pavé tactile. Au lieu de cela, tout l'écran est tactile, ce qui vous permet de taper sur un **clavier virtuel** et d'utiliser votre doigt comme pointeur de souris.
+
+![https://media.gcflearnfree.org/content/55e073187dd48174331f516a_01_17_2014/whatisacomputer_tablet_computers.jpg](https://media.gcflearnfree.org/content/55e073187dd48174331f516a_01_17_2014/whatisacomputer_tablet_computers.jpg)
+
+Les tablettes ne peuvent pas nécessairement faire tout ce que les ordinateurs traditionnels peuvent faire. Pour de nombreuses personnes, un ordinateur traditionnel comme un **ordinateur de bureau** ou **un ordinateur portable** est toujours nécessaire pour utiliser certains programmes. Cependant, la commodité d'un ordinateur tablette signifie qu'il peut être idéal comme **deuxième ordinateur** .
+
+## Liseuses
+
+**Les liseuses** — aussi appelées **liseuses** — ressemblent aux tablettes électroniques, sauf qu'elles sont principalement conçues pour lire **des livres électroniques** (livres numériques téléchargeables). Les exemples notables incluent le **Kindle d'Amazon** , **Barnes & Noble Nook** et **Kobo** . La plupart des liseuses utilisent un écran **à encre électronique** , qui est plus facile à lire qu'un écran d'ordinateur traditionnel. Vous pouvez même lire en plein soleil, comme si vous lisiez un livre ordinaire.
+
+![https://media.gcflearnfree.org/content/55e073187dd48174331f516a_01_17_2014/mobile_device_e_reader.jpg](https://media.gcflearnfree.org/content/55e073187dd48174331f516a_01_17_2014/mobile_device_e_reader.jpg)
+
+Vous n'avez pas besoin d'une liseuse pour lire des livres électroniques. Ils peuvent également être lus sur **des tablettes** , **des smartphones** , **des ordinateurs portables** et **des ordinateurs de bureau** .
+
+## Smartphones
+
+Un smartphone est une version plus puissante d'un téléphone portable traditionnel. En plus des mêmes fonctionnalités de base - appels téléphoniques, messagerie vocale, messagerie texte - les smartphones peuvent se **connecter à Internet** via Wi-Fi ou un réseau cellulaire (ce qui nécessite l'achat d'un **forfait de données** mensuel ). Cela signifie que vous pouvez utiliser un smartphone pour les mêmes choses que vous feriez normalement sur un ordinateur, comme consulter votre courrier électronique, naviguer sur le Web ou faire des achats en ligne.
+
+![https://media.gcflearnfree.org/content/55e073187dd48174331f516a_01_17_2014/mobile_device_smartphone.jpg](https://media.gcflearnfree.org/content/55e073187dd48174331f516a_01_17_2014/mobile_device_smartphone.jpg)
+
+La plupart des smartphones utilisent un **écran tactile** , ce qui signifie qu'il n'y a pas de clavier physique sur l'appareil. Au lieu de cela, vous taperez sur un clavier virtuel et utiliserez vos doigts pour interagir avec l'écran. Les autres fonctionnalités standard incluent un appareil photo numérique de haute qualité et la possibilité de lire de la musique numérique et des fichiers vidéo. Pour de nombreuses personnes, un smartphone peut en fait remplacer des appareils électroniques comme un vieil ordinateur portable, un lecteur de musique numérique et un appareil photo numérique dans le même appareil.
+
+# 6- Est-ce nécessaire d’en parler ?
+
+Au parcours de cette note, certains vont se demander quel est le lien entre cette présentation et l’architecte cloud ? Je pourrais illustrer ce lien de plusieurs manières mais je le ferai simplement par une seule image, les [types d’instances proposés par Amazon pour le service de calcul EC2](https://aws.amazon.com/fr/ec2/instance-types/) : 
+
+<Image src={materielAWS} alt="AWS EC2 matériel" />
+
+AWS offre la possibilité de “*composer*” votre ordinateur en fonction de votre charge de travail : vous pouvez choisir le type de processeur, la RAM et même le stockage ainsi que les capacités réseau. Je ne vais pas entrer dans les détails mais il était important de créer un lien entre ce qui est présenté aujourd’hui et ce qui nous attend plus tard.
+
+Nous allons finir cette partie sur les notions de base en informatique dans la prochaine note qui abordera le volet logiciel.
+
+## Liens cités ou à consulter
+
+- Les notions de base en informatique avec le cours “****[Computer & Technology Basics Course for Absolute Beginners](https://www.youtube.com/watch?v=y2kg3MOk1sY)” sur la chaîne Youtube de freeCodeCamp.**
+- La version écrite du cours : [https://edu.gcfglobal.org/en/computerbasics/#](https://edu.gcfglobal.org/en/computerbasics/#)
+- Le meilleur bootcamp pour passer de zéro à développeur web, [The Odin Project](https://www.theodinproject.com/)

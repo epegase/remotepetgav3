@@ -1,0 +1,136 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import Image from 'next/future/image'
+import adresseIP from './adresseIP.png'
+import comm2ordi from './comm2ordi.png'
+import commEntreRouteurs from './commEntreRouteurs.png'
+import commISP from './commISP.png'
+import commOrdiRouteur from './commOrdiRouteur.png'
+import commPlusieursOrdi from './commPlusieursOrdi.png'
+import commRouteurModem from './commRouteurModem.png'
+import reseauRouteurs from './reseauRouteurs.png'
+import submarineCables from './submarineCables.png'
+import webAcademind from './webAcademind.png'
+
+export const meta = {
+  author: 'Duverger PETGA',
+  date: '2023-03-27',
+  title: 'Prépa Certification Architecte de solutions AWS | Ep.11 : Comment Internet fonctionne ? (Version Simplifiée)',
+  description:
+    'Dans cette vidéo, nous présentons le fonctionnement d\'\ Internet mais de façon très simplifiée. Cette approche très approximative laisse de côté des détails techniques qui, chemin faisant, seront abordés plus tard. L\'\ objectif est de donner dès le départ une vue d\'\ ensemble d\'\ Internet.',
+}
+
+export default (props) => <ArticleLayout meta={meta} {...props} />
+
+Bonjour et Bienvenue au Club des Architectes Cloud AWS… La chaîne Youtube dont l’ambition est de rassembler les architectes cloud AWS d’expression francophone sous une même bannière. 
+
+La semaine passée a été principalement consacrée aux notions de base en informatique où nous avons abordé le concept d’ordinateur ainsi que le matériel et le logiciel. Mais nous avions aussi défini le développement web et ce qui se passait lorsque vous tapiez l’adresse d’un site web dans votre navigateur. Bien sûr, nous abordons cela dans une approche très approximative car nous devons faire simple pour les débuts de ce parcours. Chemin faisant, nous allons aller en profondeur.
+
+Pour rappel, le développement web est une affaire de niveau d’abstraction. Vous surfez tous les jours, vous faites vos achats en ligne sur les sites d’e-commerce, vous échangez sur les réseaux sociaux, vous êtes à Youtube pour visionner, vous lisez votre journal en ligne, vous consultez la page de votre artiste préféré pour voir les prochaines dates de concert,…etc.  Pour faire plus simple, vous “***consommez***” les sites web produits par d’autres. Lorsque vous avez la casquette de développeur, vous passez de l’autre côté : vous devez “***produire***” des sites web. Donc, en tant que développeur web, vous devez avoir une idée sur ce qui se passe lorsqu’on tape www. 
+
+Dans [l’épisode 7](https://www.remotepetga.dev/articles/prepa-certification-saa-c03-ep7-apres-www), nous avons présenté de façon détaillée cette séquence là : votre navigateur appelé “client” dans le jargon du développement web émet une requête qui est acheminée vers le serveur par votre connexion Internet. Cette requête passe par un annuaire appelé DNS ou serveur de nom de domaine pour retrouver l’adresse exacte des machines ou “serveurs”  et cela permet au navigateur de déposer la requête à ces serveurs. Les serveurs reçoivent la requête et envoient une réponse au navigateur et le navigateur affiche le site web. 
+
+La bonne illustration pour cette séquence est celle Maximilian Schwarzmüller; extraite du cours “****[100 Days Of Code](https://pro.academind.com/p/web-development-2022-the-complete-guide)”.**
+
+ <Image src={webAcademind} alt="illustration requête réponse" />
+
+Toute cette séquence passe par votre connexion Internet… c’est grâce à Internet que la requête est acheminée vers les serveurs. C’est encore grâce à Internet que la réponse des serveurs est acheminée vers le navigateur. Si vous n’avez pas de connexion Internet, vous aurez une page d’erreur à la place du site web que vous attendez.
+
+Alors, la question qu’on doit se poser est celle de savoir : **c’est quoi Internet ?**
+
+La définition commune qu’on retrouve un peu partout est qu’Internet est un vaste réseau d’ordinateurs qui communiquent les uns avec les autres. Nous allons entrer dans les détails en nous servant de meilleurs ressources pour comprendre comment les ordinateurs arrivent à communiquer entre eux.
+
+## 1- Comment on arrive à faire communiquer 2 ordinateurs ?
+
+> Pour que deux ordinateurs puissent communiquer entre eux, ils doivent être liés soit par un lien physique (généralement par un [câble Ethernet](https://fr.wikipedia.org/wiki/Ethernet)), soit sans fil (par exemple, via [WiFi](http://fr.wikipedia.org/wiki/WiFi) ou [Bluetooth](http://fr.wikipedia.org/wiki/Bluetooth)). Tous ces types de connexions sont possibles sur les ordinateurs modernes. Source : MDN, [le fonctionnement d’Internet](https://developer.mozilla.org/fr/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work), extrait le 26 Mars 2023.
+> 
+
+ <Image src={comm2ordi} alt="communication entre 2 ordinateurs" />
+
+## 2- Comment on arrive à faire communiquer plus de 2 ordinateurs ?
+
+> Un réseau comme celui illustré ci-haut n'est pas limité à deux ordinateurs. Vous pouvez y connecter autant d'ordinateurs que vous le souhaitez, mais le tout se complique très rapidement. Ainsi, si vous voulez relier, disons, dix ordinateurs entre eux, vous aurez besoin de 45 câbles et de neuf prises sur chaque ordinateur!                                                                   Source : MDN, [le fonctionnement d’Internet](https://developer.mozilla.org/fr/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work), extrait le 26 Mars 2023.
+> 
+
+ <Image src={commPlusieursOrdi} alt="communication entre plusiers ordinateurs" />
+
+> Afin de résoudre ce problème, chaque ordinateur du réseau est relié à un petit ordinateur bien spécial que l'on appelle *routeur*. Ce *routeur* n'a qu'une seule fonction : tout comme un signaleur de gare de train, il s'assure que les messages transmis par un ordinateur donné se rendent au bon ordinateur destinataire. Ainsi, pour envoyer un message à l'ordinateur B, l'ordinateur A transmet d'abord le message au routeur, qui s'assure alors de transférer le message à l'ordinateur B et non à l'ordinateur C.
+> 
+
+> Vous voyez donc que lorsque nous ajoutons un routeur dans notre structure, notre réseau de dix ordinateurs ne requiert alors que de dix câbles, d'une prise par ordinateur et d'un routeur de 10 ports.
+> 
+
+ <Image src={commOrdiRouteur} alt="communication entre ordinateurs avec routeur" />
+
+## 3- Comment on en arrive à Internet ?
+
+> Jusqu'ici tout est beau, mais comment fait-on pour relier des centaines, des milliers ou même des milliards d'ordinateurs entre eux ? Bien évidemment, un seul *routeur* ne pourrait suffire pour tant de connexions. Cependant, si vous avez lu attentivement, vous aurez constaté qu'un *routeur* n'est en réalité qu'un ordinateur. Serait-ce alors possible de lier deux *routeurs*? Oui, absolument, et en voici le résultat!
+> 
+
+ <Image src={commEntreRouteurs} alt="communication entre routeurs" />
+
+> En liant les ordinateurs à des routeurs, puis les routeurs entre eux, nous avons la capacité d'étendre le réseau indéfiniment.
+> 
+
+ <Image src={reseauRouteurs} alt="réseau de routeurs" />
+
+> Un tel réseau s'apparente de près à ce que nous appelons l'Internet, mais il y a un élément manquant. Ce réseau a été conçu pour répondre à nos besoins personnels, mais d'autres réseaux existent également. Vos amis, vos voisins et plein d'autres gens peuvent avoir leurs propres réseaux d'ordinateurs. Cependant, il vous est plutôt impossible de brancher des câbles entre votre maison et le reste de la planète, alors que faire ? Eh bien, il se trouve que votre maison est déjà câblée et liée aux réseaux électrique et téléphonique. L'infrastructure téléphonique, qui lie déjà votre maison au reste de la planète, répond parfaitement à nos besoins. Afin de lier notre réseau à l'infrastructure téléphonique, nous devons utiliser un appareil spécialisé appelé *modem*. Ce *modem* convertit l'information de notre réseau en information décodable par l'infrastructure téléphonique et vice-versa.
+> 
+
+ <Image src={commRouteurModem} alt="communication entre routeur et modem" />
+
+> Notre réseau est donc lié à l'infrastructure téléphonique. La prochaine étape consiste alors à transmettre avec succès nos messages au réseau cible. À cette fin, nous allons lier notre réseau à un Fournisseur d'accès à Internet (FAI). Un FAI est une entreprise qui gère des *routeurs* qui sont liés entre eux et qui ont des droits d'accès aux routeurs d'autres FAI. Le message transmis par notre réseau est ainsi transporté à travers le réseau de FAI afin d'atteindre le réseau cible. Voilà en quoi consiste l'Internet : il s'agit de toute cette infrastructure de réseaux (dans les schémas suivants, ISP signifie FAI, c'est le terme anglais pour fournisseur d'accès).
+> 
+
+ <Image src={commISP} alt="communication entre routeurs et ISP" />
+
+## 4- Comment on localise un ordinateur ?
+
+> Lorsque nous souhaitons transmettre un message à un ordinateur, nous devons préciser de quel ordinateur il s'agit. Par conséquent, chaque ordinateur lié à un réseau possède une adresse unique appelée « adresse IP » (où « IP » signifie *Internet Protocol*) qui sert à localiser l'ordinateur. Cette adresse est composée d'une série de nombres séparés par des points, par exemple : `192.168.2.10` ou de lettres et de chiffres séparés par deux points. `2001:0db8:85a3:0000:0000:8a2e:0370:7334`.
+> 
+> 
+> C'est une méthode très efficace pour les ordinateurs, mais les humains ont un peu plus de difficulté à retenir de telles adresses numériques. Afin de se faciliter la tâche, un libellé alphabétique, appelé *nom de domaine,* est souvent associé aux adresses IP. Par example, `google.com` est le nom de domaine associé à l'adresse IP `173.194.121.32`. L'utilisation d'un nom de domaine est ainsi le moyen le plus facile d'atteindre un ordinateur via l'Internet.
+> 
+
+ <Image src={adresseIP} alt="illustration adresse IP" />
+
+## 5- Différence entre Internet et le Web
+
+> Vous aurez peut-être constaté que lorsque nous naviguons sur le Web avec un navigateur Web, nous utilisons un nom de domaine pour rejoindre un site web. Est-ce donc dire qu'Internet et Web réfèrent à une seule et même notion ? La réponse n'est pas si simple. Comme nous l'avons vu, l'Internet est une infrastructure technique qui lie des milliards d'ordinateurs entre eux. Parmi ces ordinateurs, certains ordinateurs (appelés *serveurs Web*) peuvent transmettre des messages décodables par les navigateurs Web. Ainsi, l'*Internet* est une infrastructure, alors que le *Web* est un service utilisant l'infrastructure de l'Internet. Il importe de mentionner que d'autres services utilisent l'infrastructure de l'Internet, comme le courriel et [IRC](https://developer.mozilla.org/fr/docs/Glossary/IRC).
+> 
+
+Il est important de faire une différence entre Internet et le web. Internet est une infrastructure technique et le web est un service qui utilise cet infrastructure. Et si vous n’êtes pas toujours convaincu qu’Internet est une infrastructure, vous le verrez avec le point suivant.
+
+## 6- Les câbles sous-marins et Internet
+
+Très peu de personnes savent que près de 99% du trafic mondial d’Internet passe par les câbles sous-marins…
+
+ <Image src={submarineCables} alt="illustration cables sous-marins" />
+
+Source : Site web [https://www.submarinecablemap.com/](https://www.submarinecablemap.com/) 
+
+Ce thème de câbles sous-marins revient à l’actualité que lorsqu’un événement imprévu les endommage et rend inaccessible Internet, comme [le cyclone Sandy l’avait fait en 2012](https://www.lepoint.fr/high-tech-internet/sandy-une-partie-d-internet-inaccessible-31-10-2012-1523409_47.php), ou lors de la [catastrophe nucléaire de Fukushima](https://www.datacenterdynamics.com/en/news/japan-earthquake-fukushima-outages-internet-power/) ou encore [l’éruption volcanique de Tonga](https://www.euronews.com/next/2022/02/23/tonga-is-finally-back-online-here-s-why-it-took-5-weeks-to-fix-its-volcano-damaged-interne) qui a mis cette île sans connexion Internet pendant plus d’un mois…
+
+Nous n’allons pas pour l’instant entrer dans les détails sur cette infrastructure mais je vous conseille de visionner jusqu’à la fin cette vidéo sur Youtube qui présente simplement ce thème avec les enjeux actuels : 
+
+- ****[Du télégraphe à Internet : l'incroyable histoire des câbles sous-marins](https://www.youtube.com/watch?v=j07V-P7-MBo), Les Echos**
+
+## 7- Une vidéo vaut plus que mille mots
+
+Pour terminer cette partie, je vous conseille de voir cette vidéo qui présente de façon simplifié et animée comment cette vidéo que vous allez voir a parcouru des milliers de kilomètres depuis un centre de données de Google pour vous atteindre. Comme ces données voyagent pour atteindre votre smartphone ou votre ordinateur portable.
+
+- ****[How does the INTERNET work? | ICT #2](https://www.youtube.com/watch?v=x3c1ih2NJEg) - Lesics**
+
+Je l’ai dit en début de vidéo, nous sommes encore au début de notre aventure et les choses sont plus compliquées que ce que j’ai présenté et nous allons y revenir. L’important pour un début est d’avoir une vue générale.
+
+Dans la prochaine vidéo, nous présentons les trois (3) principaux langages de programmation pour le développement web.
+
+## Liens cités ou à consulter
+
+- ****[How Does The Internet Work?](https://www.youtube.com/watch?v=eHp1l73ztB8) - BBC Click (Youtube)**
+- **[A VOIR ABSOLUMMENT]** : ****[Du télégraphe à Internet : l'incroyable histoire des câbles sous-marins](https://www.youtube.com/watch?v=j07V-P7-MBo), Les Echos**
+- **[A VOIR ABSOLUMMENT]** : ****[How does the INTERNET work? | ICT #2](https://www.youtube.com/watch?v=x3c1ih2NJEg) - Lesics**
+- ****[How The Internet Travels Across Oceans](https://www.youtube.com/watch?v=yd1JhZzoS6A) - Tech Vision (Youtube)**
+- ****[How the Internet Works in 5 Minutes](https://www.youtube.com/watch?v=7_LPdttKXPc&t=46s) - Aaron (Youtube)**
+- **[Le fonctionnement de l'Internet](https://developer.mozilla.org/fr/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work) - MDN Web Docs**
+- **[AVANCE]** : ****[How Data moves through the Internet](https://www.youtube.com/watch?v=YJGGYKAV4pA&list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi&index=13) - Networking Fundamentals ([Practical Networking](https://www.youtube.com/@PracticalNetworking))**
+- Le meilleur bootcamp pour passer de zéro à développeur web, [The Odin Project](https://www.theodinproject.com/)
