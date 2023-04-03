@@ -1,0 +1,76 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import Image from 'next/future/image'
+import siteBooking from './siteBooking.png'
+import siteProjet from './siteProjet.png'
+
+export const meta = {
+  author: 'Duverger PETGA',
+  date: '2023-03-29',
+  title: 'Prépa Certification Architecte de solutions AWS | Ep.13 : Qu’est-ce qu’un site web ?',
+  description:
+    'La définition commune qu\’\on donne à un site web est qu\’\ un site web est un ensemble de pages web et de ressources reliées par des liens hypertexte, un ensemble défini et accessible par une adresse web. Pour tout aspirant développeur web et architecte cloud, il faut dépasser cette définition et avoir une idée sur l\’\ ensemble des éléments qu\’\on retrouve dans un site web car c\’\est grâce à ces éléments que vous saurez “composer” un site web, comment “structurer” un site web.',
+}
+
+export default (props) => <ArticleLayout meta={meta} {...props} />
+
+Bonjour et Bienvenue au Club des Architectes Cloud AWS… La chaîne Youtube dont l’ambition est de rassembler les architectes cloud AWS d’expression francophone sous une même bannière. 
+
+Dans la vidéo précédente, nous avons présenté le HTML, le CSS et Javascript que vous allez utiliser pour développer les sites web. Et dans ce sens, avant de verser dans le code, il fallait que je présente le livrable, la finalité qui est le site web. Je profite de ce rappel pour insister que ce parcours de développement web fait partie des fondamentaux à maîtriser pour une bonne préparation d’architecte cloud. En plus de ce parcours, nous aurons un volet “fonctionnement d’Internet”, un volet “systèmes distribués” et un volet “sécurité”.
+
+Nombre de formateurs commencent leur cours sur le développement web en passant directement au code mais je juge cette approche très réductrice. Si vous observez ce que je fais déjà depuis deux semaines, c’est présenter l’environnement qui tourne autour du développement web : l’ordinateur, le matériel, le logiciel, le cycle de requête et réponse entre navigateurs et serveurs, …etc.
+
+A leur décharge, on peut citer le format très court des cours qui oblige ces formateurs à passer à ce qu’ils estiment d’essentiel. Fort heureusement, je n’ai pas la même contrainte et je m’attarder sur les détails.
+
+La question que je vais essayer de répondre aujourd’hui est celle de savoir ce qu’un site web. Pour y arriver, commençons par la définition de [Wikipedia](https://fr.wikipedia.org/wiki/Site_web)…
+
+> Un site web est un ensemble de pages web et de ressources reliées par des hyperliens, défini et accessible par une adresse web.
+> 
+
+Dans cette définition, nous avons quelques mots clés : pages web, ressources, hyperliens, adresse web… Si on s’en tient à [Wikipedia](https://fr.wikipedia.org/wiki/Page_web), on ne retrouve pas une définition commune de la page web, juste que la “*page web est l'unité de consultation du World Wide Web*”. Les ressources  de façon simple sont les documents, les fichiers du site web puisque le code en HTML, CSS ou Javascript que vous aller écrire, cela va être dans des fichiers comme le texte Word que vous écrivez est bien dans un fichier de votre machine. Dans ces ressources, on peut aussi y retrouver des images, des vidéos et autres.
+
+Pour ce qui est de l’hyperlien, revenons à [Wikipedia](https://fr.wikipedia.org/wiki/Hyperlien) : 
+
+> Un hyperlien ou lien hypertexte, est une référence placée dans le contenu d'un document électronique permettant de passer automatiquement d'un document consulté à un autre document ou à une autre partie du même document. Il prend la plupart du temps la forme d'un texte souligné en bleu, mais peut également être placé sur une photographie, une image, un bouton, notamment.
+> 
+
+En clair, à chaque fois que vous cliquez sur un élément sur un site web et que vous êtes redirigé ailleurs, c’est grâce à l’hyperlien.
+
+Pour le dernier mot clé, l’adresse web, voilà ce qu’en dit Wikipedia
+
+> Les adresses web, également appelées URL (Uniform Resource Locator), sont des adresses utilisées pour identifier et localiser des ressources sur Internet, telles que des pages Web, des images, des vidéos et des fichiers. Elles sont généralement formées par la combinaison de protocoles de communication (tels que HTTP ou HTTPS), le nom de domaine (ou l'adresse IP) du serveur où se trouve la ressource, et un chemin vers la ressource spécifique. Les adresses web sont utilisées pour accéder à des contenus sur Internet à travers un navigateur web ou un autre client de réseau.
+> 
+
+Nous n’allons pas rentrer dans les détails des protocoles de communication pour l’instant mais sachez que l’adresse web permet à un navigateur de retrouver le site web demandé.
+
+Après avoir abordé cette définition assez commune que vous allez retrouver un peu partout, je vais m’atteler à vous proposer un contenu que je juge utile de mon point de vue.
+
+Lorsque vous visitez les sites web, vous constatez que les pages que vous consultez ont : 
+
+- des titres, un peu comme les titres des documents que vous rédigez
+- des textes, regroupés en paragraphes,
+- des boutons pour vous permettre de sélectionner un élément ou valider un choix,
+- des champs de saisie de texte pour vous permettre de saisir des données,
+- des listes pour présenter des informations, un peu comme les menus de recettes de cuisine
+- des icônes pour vous permettre d’identifier rapidement une chose…
+
+Je pourrai lister des dizaines et des dizaines d’éléments que vous rencontrez dans un site web. 
+
+Prenons un exemple avec la page d’accueil du site de réservation en ligne [Booking](https://www.booking.com/index.fr.html)… Quels élements identifiez-vous ? 
+
+<Image src={siteBooking} alt="site web booking" />
+
+Il faut savoir ce que vous allez développer et surtout vous poser la question pourquoi tel élément a été choisi et pas l’autre ? 
+
+Prenons un autre exemple avec [le site web](https://spotlight.tailwindui.com/) que nous allons développer puisque notre approche pédagogique est orientée “projet”…
+
+<Image src={siteProjet} alt="site web du site projet" />
+
+Quels sont les éléments de ce site web ? Vous pouvez continuer l’exercice avec d’autres sites web et aller dans les détails. Cela sera très utile pour la suite.
+
+Pour un développeur web, il faut avoir une idée sur l’ensemble des éléments qu’on retrouve dans un site web car c’est grâce à ces éléments que vous saurez comment “*composer*”, comment “*structurer*” un site web. Et je pense de mon point de vue que connaître ces éléments est aussi important que maîtriser le langage HTML, ou même CSS ou Javascript.
+
+Nous allons faire l’effort de présenter ces éléments dans la prochaine vidéo.
+
+## Liens cités ou à consulter
+
+- Le meilleur bootcamp pour passer de zéro à développeur web, [The Odin Project](https://www.theodinproject.com/)
